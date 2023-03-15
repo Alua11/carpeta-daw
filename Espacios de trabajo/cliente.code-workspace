@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../cliente"
+		},
+		{
+			"path": "../../../../../xampp/htdocs/servidor/cliente"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cliente"
+	}
+}

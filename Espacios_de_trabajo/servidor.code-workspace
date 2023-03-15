@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../servidor"
+		},
+		{
+			"path": "../../../../../xampp/htdocs/servidor"
+		}
+	],
+	"settings": {}
+}
