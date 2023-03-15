@@ -1,0 +1,127 @@
+ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,10
+ColsVisible_connform.ListSessions<|||>1<|||>0,1,4,6
+ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
+ColSort_connform.ListSessions<|||>1<|||>0,0
+MainWinOnMonitor<|||>3<|||>0
+MainWinWidth<|||>3<|||>781
+MainWinHeight<|||>3<|||>822
+ColWidths_MainForm.ListDatabases<|||>1<|||>150,80,50,50,50,50,50,50,50,50,120
+ColsVisible_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
+ColPositions_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
+ColSort_MainForm.ListDatabases<|||>1<|||>0,0
+ColWidths_MainForm.ListVariables<|||>1<|||>160,200,428
+ColsVisible_MainForm.ListVariables<|||>1<|||>0,1,2
+ColPositions_MainForm.ListVariables<|||>1<|||>0,1,2
+ColSort_MainForm.ListVariables<|||>1<|||>0,0
+ColWidths_MainForm.ListStatus<|||>1<|||>160,428,100,100
+ColsVisible_MainForm.ListStatus<|||>1<|||>0,1,2,3
+ColPositions_MainForm.ListStatus<|||>1<|||>0,1,2,3
+ColSort_MainForm.ListStatus<|||>1<|||>0,0
+ColWidths_MainForm.ListProcesses<|||>1<|||>70,80,80,80,80,50,50,226
+ColsVisible_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
+ColPositions_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
+ColSort_MainForm.ListProcesses<|||>1<|||>0,1
+ColWidths_MainForm.ListCommandStats<|||>1<|||>120,100,100,100,368
+ColsVisible_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
+ColPositions_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
+ColSort_MainForm.ListCommandStats<|||>1<|||>1,1
+ColWidths_MainForm.ListTables<|||>1<|||>120,70,70,120,120,70,100,50,70,70,70,70,70,90,120,70,70,70,50
+ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
+ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+ColSort_MainForm.ListTables<|||>1<|||>0,0
+LastSessions<|||>1<|||>php
+LastActiveSession<|||>1<|||>php
+SessionManager_WindowLeft<|||>3<|||>494
+SessionManager_WindowTop<|||>3<|||>139
+DataFontSize<|||>3<|||>7
+ColWidths_frmTableEditor.listColumns<|||>1<|||>48,137,152,115,60,89,111,117,130,139,100,100
+ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
+ColWidths_frmTableEditor.treeIndexes<|||>1<|||>108,100,80,120
+ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3
+ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3
+ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
+ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>61,80,100,80,80,80
+ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
+ColWidths_frmTableEditor.listCheckConstraints<|||>1<|||>200,281
+ColsVisible_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
+ColPositions_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
+ColSort_frmTableEditor.listCheckConstraints<|||>1<|||>-1,0
+querymemoheight<|||>3<|||>144
+dbtreewidth<|||>3<|||>305
+sqloutheight<|||>3<|||>105
+MainWinMaximized<|||>3<|||>1
+MainWinLeft<|||>3<|||>952
+MainWinTop<|||>3<|||>0
+ColWidths_UserManagerForm.listUsers<|||>1<|||>97,80
+ColsVisible_UserManagerForm.listUsers<|||>1<|||>0,1
+ColPositions_UserManagerForm.listUsers<|||>1<|||>0,1
+ColSort_UserManagerForm.listUsers<|||>1<|||>0,0
+SQLFile0<|||>1<|||>C:\Users\rukio\Desktop\Nueva carpeta\servidor\HeidiSQL_12.2_64_Portable\Backups\query-tab-2023-01-16_08-26-02-359.sql
+Servers\php\SessionCreated<|||>1<|||>2022-12-05 08:17:53
+Servers\php\Host<|||>1<|||>127.0.0.1
+Servers\php\WindowsAuth<|||>3<|||>0
+Servers\php\CleartextPluginEnabled<|||>3<|||>0
+Servers\php\User<|||>1<|||>root
+Servers\php\Password<|||>1<|||>8
+Servers\php\LoginPrompt<|||>3<|||>0
+Servers\php\Port<|||>1<|||>3306
+Servers\php\NetType<|||>3<|||>0
+Servers\php\Compressed<|||>3<|||>0
+Servers\php\LocalTimeZone<|||>3<|||>0
+Servers\php\QueryTimeout<|||>3<|||>30
+Servers\php\KeepAlive<|||>3<|||>20
+Servers\php\FullTableStatus<|||>3<|||>1
+Servers\php\Databases<|||>1<|||>
+Servers\php\Library<|||>1<|||>libmariadb.dll
+Servers\php\Comment<|||>1<|||>
+Servers\php\StartupScriptFilename<|||>1<|||>
+Servers\php\TreeBackground<|||>3<|||>536870911
+Servers\php\SshExecutable<|||>1<|||>
+Servers\php\SSHtunnelHost<|||>1<|||>
+Servers\php\SSHtunnelHostPort<|||>3<|||>22
+Servers\php\SSHtunnelUser<|||>1<|||>
+Servers\php\SSHtunnelPassword<|||>1<|||>8
+Servers\php\SSHtunnelTimeout<|||>3<|||>4
+Servers\php\SSHtunnelPrivateKey<|||>1<|||>
+Servers\php\SSHtunnelPort<|||>3<|||>3307
+Servers\php\SSL_Active<|||>3<|||>0
+Servers\php\SSL_Key<|||>1<|||>
+Servers\php\SSL_Cert<|||>1<|||>
+Servers\php\SSL_CA<|||>1<|||>
+Servers\php\SSL_Cipher<|||>1<|||>
+Servers\php\IgnoreDatabasePattern<|||>1<|||>
+Servers\php\LogFileDdl<|||>3<|||>0
+Servers\php\LogFileDml<|||>3<|||>0
+Servers\php\LogFilePath<|||>1<|||>C:\Users\rukio\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
+Servers\php\ServerVersionFull<|||>1<|||>10.4.24-MariaDB - mariadb.org binary distribution
+Servers\php\ConnectCount<|||>3<|||>34
+Servers\php\ServerVersion<|||>3<|||>100424
+Servers\php\LastConnect<|||>1<|||>2023-03-06 09:39:12
+Servers\php\lastUsedDB<|||>1<|||>trabajo_daw
+Servers\php\RefusedCount<|||>3<|||>3
+Servers\php\QueryHistory\7<|||>1<|||>2023-02-03 19:35:09|videoclub|16|INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('1', '1', '2022/09/12', '2022/09/13'); <{{{><}}}>
+Servers\php\QueryHistory\8<|||>1<|||>2023-02-03 20:10:32|videoclub|47|TRUNCATE TABLE cliente
+Servers\php\QueryHistory\9<|||>1<|||>2023-02-03 20:11:12|videoclub|47|DROP TABLE if exists cliente;<{{{><}}}>CREATE TABLE cliente(<{{{><}}}>    id INT(11) AUTO_INCREMENT,<{{{><}}}>    dni VARCHAR(10) UNIQUE NOT NULL,<{{{><}}}>    nombre VARCHAR(50) NOT NULL,<{{{><}}}>    apellido1 VARCHAR(50) NOT NULL,<{{{><}}}>    apellido2 VARCHAR(50),<{{{><}}}>    PRIMARY KEY(id)<{{{><}}}>);
+Servers\php\QueryHistory\2<|||>1<|||>2023-02-03 20:12:39|videoclub|16|INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('1', '1', '2022/09/12', '2022/09/13');<{{{><}}}>INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('2', '1', '2022/09/13', '2022/09/14');<{{{><}}}>INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('3', '1', '2023/01/28', '2023/01/31');<{{{><}}}>INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('4', '1', '2023/02/01', NULL);
+Servers\php\QueryHistory\10<|||>1<|||>2023-02-03 22:36:36|videoclub|31|DROP TABLE if exists alquilado;<{{{><}}}>CREATE TABLE alquilado(<{{{><}}}>    id INT(11) AUTO_INCREMENT,<{{{><}}}>    id_cliente INT(11) NOT NULL,<{{{><}}}>    id_producto INT(11) NOT NULL,<{{{><}}}>    fecha_inicio DATE NOT NULL,<{{{><}}}>    fecha_fin DATE,<{{{><}}}>    PRIMARY KEY(id)<{{{><}}}>);
+Servers\php\QueryHistory\6<|||>1<|||>2023-02-03 22:36:54|videoclub|31|INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('1', '1', '2022/09/12', '2022/09/13');<{{{><}}}>INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('2', '1', '2022/09/13', '2022/09/14');<{{{><}}}>-- INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('1', '2', '2022/09/20', '2022/09/23');<{{{><}}}>INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('3', '1', '2023/01/28', '2023/01/31');<{{{><}}}>INSERT INTO `alquilado` (`id_cliente`, `id_producto`, `fecha_inicio`, `fecha_fin`) VALUES ('4', '1', '2023/02/01', NULL);<{{{><}}}>
+Servers\php\QueryHistory\11<|||>1<|||>2023-02-04 15:11:35|proveedores|0|SELECT * FROM preciosum WHERE numpieza LIKE 1
+Servers\php\QueryHistory\13<|||>1<|||>2023-02-04 15:12:24|proveedores|0|SELECT * FROM preciosum WHERE numpieza = "1"
+Servers\php\QueryHistory\14<|||>1<|||>2023-02-04 15:13:15|proveedores|0|SELECT * FROM preciosum WHERE numpieza = 1
+Servers\php\QueryHistory\15<|||>1<|||>2023-02-04 15:21:06|proveedores|0|SELECT * FROM preciosum WHERE numpieza = "A-1001-L"
+Servers\php\QueryHistory\16<|||>1<|||>2023-02-04 15:21:16|proveedores|0|SELECT * FROM preciosum WHERE numpieza LIKE "A-1001-L"
+Servers\php\QueryHistory\17<|||>1<|||>2023-02-04 15:21:23|proveedores|0|SELECT * FROM preciosum WHERE numpieza LIKE "1"
+Servers\php\QueryHistory\12<|||>1<|||>2023-02-04 17:23:27|proveedores|0|SELECT * FROM vendedor WHERE numvend = "1"
+Servers\php\QueryHistory\18<|||>1<|||>2023-02-04 17:23:32|proveedores|0|SELECT * FROM vendedor WHERE numvend = 1
+Servers\php\QueryHistory\19<|||>1<|||>2023-02-04 19:25:29|videoclub|16|INSERT INTO `producto`(`nombre`, `precio`, `tipo`, `idioma`) VALUES ('Macarrones', 12, 'cd', 'italiano');<{{{><}}}>INSERT INTO `producto`(`nombre`, `precio`, `tipo`, `duracion`) VALUES ('Titanic', 8, 'pelicula', 120);
+Servers\php\QueryHistory\20<|||>1<|||>2023-02-06 11:12:07|examen|0|SELECT * FROM mi_equipo WHERE nick_socio="prueba"
+Servers\php\QueryHistory\21<|||>1<|||>2023-02-06 13:58:48|examen|15|SELECT MAX(codigo_mi_equipo) FROM mi_equipo
+Servers\php\QueryHistory\22<|||>1<|||>2023-03-05 08:26:57|trabajo_daw|0|SELECT al.*, c.*, a.*, la.* FROM ALBARANES al JOIN CLIENTES c ON al.cod_cliente = c.cod_cliente JOIN LINEAS_ALBARAN la ON al.cod_albaran = la.cod_albaran JOIN ARTICULOS a ON la.cod_articulo = a.cod_articulo WHERE al.cod_albaran LIKE 1;
+Servers\php\QueryHistory\1<|||>1<|||>2023-03-05 08:52:49|trabajo_daw|0|SELECT al.*, c.* FROM ALBARANES al JOIN CLIENTES c ON al.cod_cliente = c.cod_cliente WHERE al.cod_albaran LIKE 1;
+Servers\php\QueryHistory\3<|||>1<|||>2023-03-05 12:34:20|TRABAJO_DAW|0|SELECT p.*, c.*, a.*, lp.* FROM PEDIDOS p JOIN CLIENTES c ON p.cod_cliente = c.cod_cliente JOIN LINEAS_PEDIDOS lp ON p.cod_pedido = lp.cod_pedido JOIN ARTICULOS a ON lp.cod_articulo = a.cod_articulo WHERE p.cod_pedido LIKE 5 GROUP BY p.cod_pedido
+Servers\php\trabajo_daw|lineas_pedidos\Sort<|||>1<|||>0_cod_pedido|
+Servers\php\videoclub|alquilado\Sort<|||>1<|||>0_id_cliente|
