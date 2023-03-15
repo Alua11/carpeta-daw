@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>MI PRIMER EJEMPLO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>FETCH LEER FICHERO TEXTO</h1>
+    <ul>
+        <li><a data-page="page1">Fichero Texto</a></li>
+    </ul>
+    <article>
+    </article>
+</body>
+<script>
+    let miTexto = document.querySelector('article');
+    let enlace = document.querySelector('ul a');
+    enlace.onclick = function (e) {
+        e.preventDefault();
+        let fichero_Nombre = e.target.getAttribute('data-page');
+        VisualizarContenido('fichero1'); //AQUÍ ESTÁ LA GRACIA
+    };
+
+    function VisualizarContenido(pageId) {
+        console.log(pageId);
+        let peticion = new Request(pageId + '.txt'); //PARAMETROS pagina a ejecutar
+        //montamos peticion
+        fetch(peticion) //ejecutar peticion
+            .then(function (respuesta) { //resuelve peticion
+                if (!respuesta.ok) { //si la peticion se completa pero falla algo, p.ej.fichero no existe,
+                    throw new Error("HTTP error, status = " + respuesta.status);
+                }
+                return respuesta.text(); //si todo bien devolvemos el la promesa Resultado
+            })
+            .then(function (texto) {
+                miTexto.innerHTML = texto;
+            })
+            .catch(function (error) { //la petición no se completa, por lo que sea
+                miTexto.innerHTML = 'Error: ' + error.message;
+            });
+    }
+</script>
+
+</html>

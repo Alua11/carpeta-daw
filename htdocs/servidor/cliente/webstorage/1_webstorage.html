@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            Solicita al usuario una cadena de caracteres para definir la clave, o índice,
+            en el que se guardará el nombre, o cualquier cosa que quiera el usuario.
+
+            Después pediremos al usuario el valor que se guardará
+            en dicha clave (el nombre del usuario, o cualquier otro valor).
+         */
+
+        if (typeof (Storage) !== "undefined") {
+
+            let clave = prompt("Define la clave en la que guardar la informacion:");
+            let  contenido = prompt("Escribe lo que quieras guardar en ese clave");
+            localStorage.setItem(clave,  contenido);
+
+            console.log(localStorage.getItem(clave));
+        } else {
+            alert("Error")
+        }
+    </script>
+</body>
+
+</html>

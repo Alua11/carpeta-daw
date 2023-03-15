@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#m1{
+float:left;
+    border: 1px solid black;
+    width:fit-content;
+}
+
+#m2{
+float:right;
+    border: 1px solid black;
+    width:fit-content;
+}
+</style>
+
+</head>
+
+
+<body> 
+    <div id="m1">
+        <h2>Marcianito número1</h2>
+        <form>
+            <label>Mensaje</label><br>
+            <input type="text" id="mensaje1" value="Escribe el mensaje aquí"><br>
+            <input id="boton1" type="button" value="Enviar mensaje">
+        </form> 
+    </div>
+
+    <div id="m2">
+        <h2>Marcianito número2</h2>
+        <form>
+            <label>Mensaje</label><br>
+            <input type="text" id="mensaje2"><br>
+            <input id="boton2" type="button" value="Leer mensaje">
+        </form> 
+    </div>
+
+
+
+
+    <script>
+
+              
+        document.getElementById("boton1").addEventListener("click",enviarMensaje);
+        document.getElementById("boton2").addEventListener("click",leerMensaje);
+    
+        function enviarMensaje(){
+            var mensaje1 = document.getElementById("mensaje1").value;
+
+            if (!localStorage.length) { 
+                var llaveMasNuevaCAD="0";
+                localStorage.setItem(llaveMasNuevaCAD,mensaje1);
+            }
+            else {
+                var llaveMasNuevaCAD = storageMasNuevo();
+                llaveMasNuevaNUM = parseInt(llaveMasNuevaCAD);
+                llaveMasNuevaNUM++;
+                llaveMasNuevaCAD = llaveMasNuevaNUM.toString();
+
+                localStorage.setItem(llaveMasNuevaCAD,mensaje1);
+            }
+
+           
+            document.getElementById("mensaje1").value="";
+            alert("El mensaje almacenado:" + localStorage.getItem(llaveMasNuevaCAD));
+        }
+    
+        function leerMensaje(){
+            var mensaje2 = localStorage.getItem(storageMasAntiguo());
+
+            document.getElementById("mensaje2").value = mensaje2;          
+                        
+            alert("El mensaje borrado:" + mensaje2);
+            localStorage.removeItem(storageMasAntiguo()); 
+        }
+    
+
+        function storageMasAntiguo(){
+            var llave=[];
+            var antigua=localStorage.key(0);
+            antigua = parseInt(antigua);
+            for(var i=0;i<localStorage.length;i++){
+                llave[i] = parseInt(localStorage.key(i));
+                if (llave[i]<antigua) antigua=llave[i];
+            }
+            antigua =antigua.toString();
+            return antigua;
+        }
+
+        function storageMasNuevo(){
+            var llave=[];
+            var nuevo=localStorage.key(0);
+            nuevo = parseInt(nuevo);
+            for(var i=0;i<localStorage.length;i++){
+                llave[i] = parseInt(localStorage.key(i));
+                if (llave[i]>nuevo) nuevo=llave[i];
+            }
+            nuevo=nuevo.toString();
+            return nuevo;
+        }
+
+        </script>
+</body>
+</html>
+

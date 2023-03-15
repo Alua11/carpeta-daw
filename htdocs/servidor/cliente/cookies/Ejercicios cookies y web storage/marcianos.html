@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="enviarForm" id="enviarForm">
+        <label>Mensaje a enviar</label>
+        <input type="text" name="mensajeEnviado" id="mensajeEnviado">
+        <button type="button" name="enviar" id="enviar">Mandar mensaje</button>
+    </form>
+    <form name="recibirForm" id="recibirForm">
+        <label>Mensaje recibido</label>
+        <input type="text" name="mensajeRecibido" id="mensajeRecibido">
+        <button type="button" name="recibir" id="recibir">Recibir mensaje</button>
+    </form>
+    <script>
+
+        let enviar = document.getElementById('enviar');
+        let recibir = document.getElementById('recibir');
+
+
+        enviar.addEventListener("click", () => {
+            let mensaje = document.getElementById('mensajeEnviado');
+            setCookie('mensaje', mensaje.value, 365);
+            mensaje.value = "";
+        });
+        recibir.addEventListener("click", () => {
+            let mensaje = document.getElementById('mensajeRecibido');
+            let cookie = getCookie('mensaje');
+            mensaje.value = cookie;
+            eraseCoockie('mensaje');
+        });
+
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function eraseCoockie(cname) {
+            setCookie(cname, "", -1);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="enviarForm" id="enviarForm">
+        <label>Mensaje a enviar</label>
+        <input type="text" name="mensajeEnviado" id="mensajeEnviado">
+        <button type="button" name="enviar" id="enviar">Mandar mensaje</button>
+    </form>
+    <form name="recibirForm" id="recibirForm">
+        <label>Mensaje recibido</label>
+        <input type="text" name="mensajeRecibido" id="mensajeRecibido">
+        <button type="button" name="recibir" id="recibir">Recibir mensaje</button>
+    </form>
+    <script>
+
+        let enviar = document.getElementById('enviar');
+        let recibir = document.getElementById('recibir');
+
+
+        enviar.addEventListener("click", () => {
+            let mensaje = document.getElementById('mensajeEnviado');
+            setLocalStorage('mensaje', mensaje.value);
+            mensaje.value = "";
+        });
+        recibir.addEventListener("click", () => {
+            let mensaje = document.getElementById('mensajeRecibido');
+            let cookie = getLocalStorage('mensaje');
+            mensaje.value = cookie;
+            eraseLocalStorage('mensaje');
+        });
+
+        function setLocalStorage(cname, cvalue) {
+            localStorage[cname] = cvalue;
+        }
+
+        function getLocalStorage(cname) {
+            return localStorage[cname];
+        }
+
+        function eraseLocalStorage(cname) {
+            localStorage.removeItem(cname);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#m1{
+float:left;
+    border: 1px solid black;
+    width:fit-content;
+}
+
+#m2{
+float:right;
+    border: 1px solid black;
+    width:fit-content;
+}
+
+</style>
+
+    
+
+</head>
+
+
+<body> 
+    <div id="m1">
+        <h2>Marcianito número1</h2>
+        <form>
+            <label>Mensaje</label><br>
+            <input type="text" id="mensaje1" value="Escribe el mensaje aquí"><br>
+            <input id="boton1" type="button" value="Enviar mensaje">
+        </form> 
+    </div>
+
+    <div id="m2">
+        <h2>Marcianito número2</h2>
+        <form>
+            <label>Mensaje</label><br>
+            <input type="text" id="mensaje2"><br>
+            <input id="boton2" type="button" value="Leer mensaje">
+        </form> 
+    </div>
+
+
+
+
+    <script>
+        function setCookie(cname,cvalue,exdays) {
+          const d = new Date();
+          d.setTime(d.getTime() + (exdays*24*60*60*1000));
+          let expires = "expires=" + d.toUTCString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        
+        function getCookie(cname) {
+          let name = cname + "=";
+          let decodedCookie = decodeURIComponent(document.cookie);
+          let ca = decodedCookie.split(';');
+          for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        
+          
+        function borrarCookie(cname){
+            setCookie(cname,"",-1);
+        }
+        
+        function comprobarCookie(cname){
+            if (getCookie(cname)) return true;
+            else return false;
+        }
+
+    
+    var nombreCookie="MENSAJE";
+var matrizMensajes=[];
+   
+
+        document.getElementById("boton1").addEventListener("click",enviarMensaje);
+        document.getElementById("boton2").addEventListener("click",leerMensaje);
+    
+        function enviarMensaje(){
+            var mensaje1 = document.getElementById("mensaje1").value;
+            var matrizMensajes=[];
+
+            
+            if (!comprobarCookie(nombreCookie)) {
+                matrizMensajes.push(mensaje1);
+                var matrizMensajesJSON = JSON.stringify(matrizMensajes);
+                setCookie(nombreCookie,matrizMensajesJSON,1);            }
+            else {
+                var matrizMensajesJSON = getCookie(nombreCookie);
+                var matrizMensajes = JSON.parse(matrizMensajesJSON);
+                matrizMensajes.push(mensaje1);
+                matrizMensajesJSON = JSON.stringify(matrizMensajes);
+                setCookie(nombreCookie,matrizMensajesJSON,1);
+            }
+
+           
+
+            document.getElementById("mensaje1").value="";
+            alert("El mensaje almacenado:" + document.cookie);
+        }
+    
+        function leerMensaje(){
+            var matrizMensajesJSON = getCookie(nombreCookie);
+            var matrizMensajes = JSON.parse(matrizMensajesJSON);
+
+            var mensaje2 = matrizMensajes.shift();
+                
+            matrizMensajesJSON = JSON.stringify(matrizMensajes);
+            setCookie(nombreCookie,matrizMensajesJSON,1);
+
+            document.getElementById("mensaje2").value = mensaje2;
+                
+            alert("El mensaje almacenado:" + document.cookie);
+ 
+        }
+    
+        </script>
+</body>
+</html>
+

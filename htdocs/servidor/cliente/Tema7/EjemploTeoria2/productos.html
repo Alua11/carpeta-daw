@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta nombre="viewport" content="width=device-width">
+    <title>FETCH CON JSON EJEMPLO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>FETCH CON JSON EJEMPLO</h1>
+    <ul>
+    </ul>
+</body>
+<script>
+    let miLista = document.querySelector('ul');
+    fetch('productos.json')
+        .then(function (respuesta) {
+            if (!respuesta.ok) {
+                throw new Error("HTTP error, status = " + respuesta.status);
+            }
+            return respuesta.json();
+        })
+        .then(function (json) {
+            for (let i = 0; i < json.productos.length; i++) {
+                let ElementoLi = document.createElement('li');
+                ElementoLi.innerHTML = '<strong>' + json.productos[i].Nombre +
+                    '</strong>';
+                ElementoLi.innerHTML += ' Lo puedes encontrar en ' +
+                    json.productos[i].Localizacion + '.';
+                ElementoLi.innerHTML += ' Coste: <strong>€' + json.productos[i].Precio
+                    + '</strong>';
+                miLista.appendChild(ElementoLi);
+            }
+        })
+        .catch(function (error) {
+            let p = document.createElement('p');
+            p.appendChild(
+                document.createTextNode('Error: ' + error.message)
+            );
+            document.body.insertBefore(p, miLista);
+        });
+</script>
+
+</html>

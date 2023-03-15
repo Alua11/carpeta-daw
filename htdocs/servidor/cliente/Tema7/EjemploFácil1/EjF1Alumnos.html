@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="mostrarTexto">Muestra el archivo de texto</button>
+    <div id="contenido"></div>
+
+    <button id="mostrarTabla">Muestra el archivo JSON en forma de tabla</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Club</th>
+            </tr>
+        </thead>
+        <tbody id="tabla">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        document.getElementById("mostrarTexto").addEventListener("click", mostrarTexto);
+        let contnidoTexto = document.querySelector("#conetenido");
+
+        document.getElementById("mostrarTabla").addEventListener("click", mostrarTabla);
+        let contnidoTabla = document.querySelector("#tabla");
+
+        //fetch(url).then(cb1).then(cb2).then(cb3).catch(cb4).finally(cb5);
+        /*
+        fetch(url)
+        .then(cb1)
+        .then(cb2)
+        .then(cb3)
+        .catch(cb4)
+        .finally(cb5);
+        */
+
+        function mostrarTexto() {
+            fetch("texto.txt")
+                .then(data => data.text())
+                .then(data2 => {
+                    console.log(data2);
+                    contenido.innerHTML = data2;
+                });
+        }
+
+        function mostrarTabla() {
+                fetch("Tabla.json")
+                    .then(data => data.json())
+                    .then(data2 => {
+                        console.log(data2);
+                        for (let i = 0; i < data2.length; i++) {
+                            let fila = document.createElement("tr");
+                            for (let campo in data2[i]) {
+                                let celda = document.createElement("td");
+                                if (campo != "club") {
+                                    celda.innerHTML = data2[i][campo];
+                                } else {
+                                    celda.innerHTML = data2[i][campo] ? "Pertenece al club" : "No pertenece al club";
+                                }
+                                fila.appendChild(celda);
+                            }
+                            contnidoTabla.appendChild(fila);
+                        }
+                    });
+            }
+        
+        function mostrarTabla2() {
+            fetch("Tabla.json")
+                .then(mifuncion)
+                .then(data2 => {
+                    console.log(data2);
+                    for (let i = 0; i < data2.length; i++) {
+                        let fila = document.createElement("tr");
+                        for (let campo in data2[i]) {
+                            let celda = document.createElement("td");
+                            if (campo != "club") {
+                                celda.innerHTML = data2[i][campo];
+                            } else {
+                                celda.innerHTML = data2[i][campo] ? "Pertenece al club" : "No pertenece al club";
+                            }
+                            fila.appendChild(celda);
+                        }
+                        contnidoTabla.appendChild(fila);
+                    }
+                });
+        }
+
+        function mostrarTabla3() {
+            fetch("Tabla.json")
+                .then(mifuncion)
+                .then(crearContenidoTabla);
+        }
+
+        function crearContenidoTabla(datos) {
+            console.log(datos);
+            for (let i = 0; i < datos.length; i++) {
+                let fila = document.createElement("tr");
+                for (let campo in datos[i]) {
+                    let celda = document.createElement("td");
+                    if (campo != "club") {
+                        celda.innerHTML = datos[i][campo];
+                    } else {
+                        celda.innerHTML = datos[i][campo] ? "Pertenece al club" : "No pertenece al club";
+                    }
+                    fila.appendChild(celda);
+                }
+                contnidoTabla.appendChild(fila);
+            }
+        }
+
+        // Otras formas de hacer lo mismo:
+        function mifuncion(response) {
+            return response.json();
+        }
+        // let mifuncion = function(promesa){
+        //     return promesa.txt();
+        // }
+
+        // let mifuncion = primesa => promesa.text();
+
+    </script>
+</body>
+
+</html>

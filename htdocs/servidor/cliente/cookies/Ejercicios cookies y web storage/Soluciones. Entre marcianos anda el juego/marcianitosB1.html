@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#m1{
+float:left;
+    border: 1px solid black;
+    width:fit-content;
+}
+
+#m2{
+float:right;
+    border: 1px solid black;
+    width:fit-content;
+}
+
+</style>
+
+    
+
+</head>
+
+
+<body> 
+    <div id="m1">
+        <h2>Marcianito número1</h2>
+        <form>
+            <label>Mensaje</label><br>
+            <input type="text" id="mensaje1" value="Escribe el mensaje aquí"><br>
+            <input id="boton1" type="button" value="Enviar mensaje">
+        </form> 
+    </div>
+
+    <div id="m2">
+        <h2>Marcianito número2</h2>
+        <form>
+            <label>Mensaje</label><br>
+            <input type="text" id="mensaje2"><br>
+            <input id="boton2" type="button" value="Leer mensaje">
+        </form> 
+    </div>
+
+
+
+
+    <script>
+       
+        document.getElementById("boton1").addEventListener("click",enviarMensaje);
+        document.getElementById("boton2").addEventListener("click",leerMensaje);
+    
+        function enviarMensaje(){
+            var mensaje1 = document.getElementById("mensaje1").value;
+            
+            if (!localStorage.mensaje) {
+                localStorage.mensaje=mensaje1;         
+            }
+            else {
+                mensaje1 = localStorage.mensaje + mensaje1;
+                localStorage.mensaje=mensaje1;         
+            }
+
+
+            document.getElementById("mensaje1").value="";
+            alert("El mensaje almacenado:" + localStorage.mensaje);
+        }
+    
+        function leerMensaje(){
+            var mensaje2 = localStorage.mensaje;
+            document.getElementById("mensaje2").value = mensaje2;                
+            alert("El mensaje almacenado:" + localStorage.mensaje);
+            localStorage.removeItem("mensaje");
+ 
+        }
+    
+        </script>
+</body>
+</html>
+

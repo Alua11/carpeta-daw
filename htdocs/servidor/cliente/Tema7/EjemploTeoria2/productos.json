@@ -1,0 +1,34 @@
+{
+    "productos": [
+        {
+            "Nombre": "Queso",
+            "Precio": 2.50,
+            "Localizacion": "Alimentos Refrigerados"
+        },
+        {
+            "Nombre": "Patatuelas",
+            "Precio": 3,
+            "Localizacion": "Aperitivos"
+        },
+        {
+            "Nombre": "Pizza",
+            "Precio": 4,
+            "Localizacion": "Alimentos Refrigerados"
+        },
+        {
+            "Nombre": "Chocolate",
+            "Precio": 1.50,
+            "Localizacion": "Aperitivos"
+        },
+        {
+            "Nombre": "Harina",
+            "Precio": 1.50,
+            "Localizacion": "Zona de Horneado"
+        },
+        {
+            "Nombre": "Almendras Tostadas",
+            "Precio": 3,
+            "Localizacion": "Zona de Horneado"
+        }
+    ]
+}

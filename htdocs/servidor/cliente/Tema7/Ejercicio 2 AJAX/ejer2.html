@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            document.getElementById("comprobar").addEventListener("click", function () {
+
+                var login = document.getElementById("login").value;
+                hacerPeticionPOST("compruebaDisponibilidadJSON.php", login, mostrarPorDiv);
+
+            });
+        }
+
+        function hacerPeticionPOST(url, datosAEnviar, callback) {
+            const xhttp = new XMLHttpRequest();
+
+            xhttp.onload = function () {
+
+                if (xhttp.status == "200") {
+
+                    let respuesta = JSON.parse(this.response);
+                    console.log(respuesta);
+                    callback(respuesta, datosAEnviar);
+
+                } else {
+                    console.log("Ha ocurrido un error!!: " + xhttp.status);
+                }
+
+            }
+
+            xhttp.open("POST", url);
+
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            xhttp.onerror = function () { console.log("Error con el SERVIDOR!!") };
+
+            xhttp.send("login=" + datosAEnviar);
+        }
+
+        function mostrarPorDiv(respuesta, datosAEnviar) {
+
+                let mostrar = document.getElementById("disponibilidad");
+                let mostrarAlternativas = document.getElementById("alternativas");
+
+                if (respuesta.disponible == "si") {
+                    mostrar.innerHTML = "El nombre " + datosAEnviar + " está disponible";
+                    mostrarAlternativas.innerHTML = "";
+                } else {
+                    let alternativas = respuesta.alternativas;
+                    let contenidoAlternativas = "<ul>";
+                    for(let i = 0; i < alternativas.length; i++) {
+                        contenidoAlternativas += "<li><a href='#'>" + alternativas[i] + "</a></li>";
+                    }
+                    mostrar.innerHTML = "El nombre " + datosAEnviar + " NO está disponible";
+                    mostrarAlternativas.innerHTML = contenidoAlternativas + "<ul>";
+
+                    let enlaces = mostrarAlternativas.getElementsByTagName("a");
+                    let caja = document.getElementById("login");
+
+                    for(let i = 0; i < enlaces.length; i++) {
+                        enlaces[i].addEventListener("click", () => {
+                            caja.value = enlaces[i].innerHTML;
+                        }
+                        );
+                    }
+
+                }
+            }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Comprobar disponibilidad del login</h1>
+    <form>
+        <label for="login">Nombre de usuario:</label>
+        <input type="text" name="login" id="login" />
+        <a id="comprobar" href="#">Comprobar disponibilidad...</a>
+    </form>
+
+    <div id="disponibilidad"></div>
+    <div id="alternativas"></div>
+
+</body>
+
+</html>

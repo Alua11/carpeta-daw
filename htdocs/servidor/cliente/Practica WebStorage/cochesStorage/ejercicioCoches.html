@@ -1,0 +1,86 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ejercicio Coches</title>
+	<script type="text/javascript" src="ejercicioCoches.js"></script>
+	<style type="text/css">
+		label {
+			width: 150px;
+			float: left;
+			margin-bottom: 5px;
+		}
+
+		input,
+		select {
+			width: 150px;
+			margin-bottom: 5px;
+		}
+
+		fieldset {
+			background: #66CCCC;
+			width: 350px;
+			border: thick solid #306;
+		}
+
+		legend {
+			border-top-width: medium;
+			border-right-width: medium;
+			border-bottom-width: medium;
+			border-left-width: medium;
+			border-top-style: solid;
+			border-right-style: solid;
+			border-bottom-style: solid;
+			border-left-style: solid;
+			background-color: #FFF;
+		}
+
+		#mensajes {
+			float: left;
+			background: #33FF33;
+			width: 325px;
+		}
+
+		#errores {
+			background: #FF6633;
+			width: 325px;
+		}
+
+		#intentos {
+			background: #CCFF33;
+			width: 325px;
+		}
+
+		.error {
+			border: solid 2px #FF0000;
+
+		}
+	</style>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Ejercicio Coches</legend>
+		<form name="formulario" id="formulario" method="get">
+			<label for="matricula">Matrícula:</label>
+			<input type="text" name="matricula" id="matricula" />
+			<label for="color">Color:</label>
+			<input type="text" name="color" id="color" />
+			<label for="marca">Marca:</label>
+			<input name="marca" type="text" id="marca" />
+			<input type="reset" name="limpiar" id="button" value="Limpiar" />
+			<input type="button" name="guardar" id="guardar" value="Guardar" />
+			<input type="button" name="siguiente" id="siguiente" value="Ver Coche Siguiente" />
+			<input type="button" name="anterior" id="anterior" value="Ver Coche Anterior" />
+			<input type="button" name="eliminar" id="eliminar" value="Eliminar Coche" />
+		</form>
+		<div>
+			<div id="errores"></div>
+		</div>
+	</fieldset>
+
+</body>
+
+</html>

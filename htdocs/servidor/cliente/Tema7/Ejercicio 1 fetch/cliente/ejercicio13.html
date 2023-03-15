@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		window.onload = function () {
+
+			document.getElementById("comprobar").addEventListener("click", function () {
+
+				var login = document.getElementById("login").value;
+
+				// hacerPeticionGET ("../servidor/compruebaDisponibilidad.php?login=" + login, login, mostrarPorDiv);
+				// hacerPeticionPOST("../servidor/compruebaDisponibilidad.php", login, mostrarPorDiv);
+				hacerPeticionFech("../servidor/compruebaDisponibilidad.php", login, mostrarPorDiv);
+
+			});
+		}
+
+		function hacerPeticionFech(url, datosAEnviar, callback) {
+
+			let myInit = {
+				method: 'POST', //GET POST PUT DELETE etc..
+				headers: {
+					"Content-type": "application/x-www-form-urlencoded"
+				},
+				body: `login=${datosAEnviar}`
+			};
+
+			fetch(url, myInit)
+				.then((respuesta) => {
+
+					if (!respuesta.ok) {
+						throw new Error("HTTP error, status = " + respuesta.status);
+					}
+
+					return respuesta.text();
+
+				})
+
+				.then((texto) => { callback(texto, datosAEnviar); })
+
+				.catch((error) => { console.log("Ha ocurrido un error!!: " + error.message); });
+		}
+
+		function hacerPeticionGET(url, datosAEnviar, callback) {
+			const xhttp = new XMLHttpRequest();
+
+			xhttp.onload = function () {
+
+				if (xhttp.status == "200") {
+
+					callback(this.response, datosAEnviar);
+
+				} else {
+					console.log(`Ha ocurrido un error!!: ${error}`);
+				}
+
+			}
+
+			xhttp.open("GET", url);
+
+			xhttp.onerror = function () { console.log("Error con el SERVIDOR!!") };
+
+			xhttp.send();
+		}
+
+		function hacerPeticionPOST(url, datosAEnviar, callback) {
+			const xhttp = new XMLHttpRequest();
+
+			xhttp.onload = function () {
+
+				if (xhttp.status == "200") {
+
+					callback(this.response, datosAEnviar);
+
+				} else {
+					console.log("Ha ocurrido un error!!: " + xhttp.status);
+				}
+
+			}
+
+			xhttp.open("POST", url);
+
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+			xhttp.onerror = function () { console.log("Error con el SERVIDOR!!") };
+
+			xhttp.send("login=" + datosAEnviar);
+		}
+
+		function mostrarPorDiv(respuesta, datosAEnviar) {
+
+			let mostrar = document.getElementById("disponibilidad");
+
+			if (respuesta == "si") {
+				mostrar.innerHTML = "El nombre " + datosAEnviar + " está disponible";
+			} else {
+				mostrar.innerHTML = "El nombre " + datosAEnviar + " NO está disponible";
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+	<h1>Comprobar disponibilidad del login</h1>
+	<form>
+		<label for="login">Nombre de usuario:</label>
+		<input type="text" name="login" id="login" />
+		<a id="comprobar" href="#">Comprobar disponibilidad...</a>
+	</form>
+
+	<div id="disponibilidad"></div>
+
+</body>
+
+</html>
