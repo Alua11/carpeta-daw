@@ -1,0 +1,15 @@
+.notice, .error {
+  background: yellow;
+  border: 5px solid #000;
+  padding: 20px;
+}
+.notice.alert, .alert.error {
+  background: red;
+  box-shadow: 0 0 10px red;
+}
+.notice a, .error a {
+  color: #222;
+}
+.notice a:hover, .error a:hover {
+  color: #313131;
+}/*# sourceMappingURL=Ejer2.css.map */

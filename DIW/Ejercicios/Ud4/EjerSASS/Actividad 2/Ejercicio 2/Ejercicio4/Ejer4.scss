@@ -1,0 +1,15 @@
+$font-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+body {
+    background: #fff;
+    font: normal 16px/1.5 $font-base;
+    margin: 0;
+    padding: 0;
+}
+.blueprint {
+    font: bold 24px/1.3 Georgia, serif;
+    text-align: center;
+
+    span {
+        font-family: $font-base;
+    }
+}

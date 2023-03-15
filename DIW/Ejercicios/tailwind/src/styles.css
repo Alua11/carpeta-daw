@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .my-custom-style {
+    background-image: url("../recursos/img/pattern.png");
+} */
+
+/* @layer base {
+    body {
+        background-image: url(""../recursos/img/pattern.png");
+    }
+} */
+
+@layer base {
+
+    /*FUENTES*/
+    @font-face {
+        font-family: "TrebuchetMS";
+        src: url("../recursos/fonts/TrebuchetMS.ttf");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "BebasNeue";
+        src: url("../recursos/fonts/BebasNeue.otf");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "WebSymbolsRegular";
+        src: url("../recursos/fonts/websymbols-regular-webfont.eot");
+        src: url("../recursos/fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+            url("../recursos/fonts/websymbols-regular-webfont.woff") format("woff"),
+            url("../recursos/fonts/websymbols-regular-webfont.ttf") format("truetype"),
+            url("../recursos/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .symbol {
+        font-family: "WebSymbolsRegular";
+    }
+
+    .bebas {
+        font-family: "BebasNeue";
+    }
+
+    .trebuchet {
+        font-family: "TrebuchetMS";
+    }
+
+        @layer components {
+            .menu-item {
+                @apply mr-5 ml-5 tracking-wider xs:flex-1;
+            }
+    
+            .menu-item-a {
+                @apply block transition duration-200 hover:text-azul-oscuro transform hover:scale-125;
+            }
+        }
+}
+
+.articles-header {
+    font-family: "BebasNeue";
+    @apply w-full h-16 text-center text-5xl tracking-widest pt-4 bg-slate-50 shadow-header3D font-medium;
+}
+.aside-header {
+    font-family: "BebasNeue";
+    @apply w-full h-12 text-center text-3xl tracking-widest pt-4 bg-slate-50 shadow-header3D font-medium;
+}

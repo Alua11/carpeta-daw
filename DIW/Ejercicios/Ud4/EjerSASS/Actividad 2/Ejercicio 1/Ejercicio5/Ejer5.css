@@ -1,0 +1,9 @@
+.notice {
+  background: yellow;
+  border: 5px solid #000;
+  padding: 20px;
+}
+.notice .alert {
+  background: red;
+  box-shadow: 0 0 10px red;
+}/*# sourceMappingURL=Ejer5.css.map */

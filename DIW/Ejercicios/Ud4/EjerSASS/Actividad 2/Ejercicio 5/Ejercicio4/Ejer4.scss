@@ -1,0 +1,15 @@
+@mixin familia ($size) {
+    @if $size == 12px {
+        font-family: Arial, sans-serif;
+    } @else if $size == 24px {
+        font-family: Georgia, serif;
+    } @else {
+        font-family: Helvetica, sans-serif;
+    }
+}
+
+.cambio {
+    $size: 12px;
+    @include familia($size);
+    font-size: $size;
+}

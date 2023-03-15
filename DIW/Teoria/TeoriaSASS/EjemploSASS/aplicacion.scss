@@ -1,0 +1,16 @@
+// @import "buttons";
+
+.sidebar {
+    float: right;
+    width: 300px;
+
+    .users & {
+        .users .sidebar {
+            width: 400px;
+        }
+    }
+}
+
+//aplicacion.scss
+$rounded: 5px;
+@import "buttons";

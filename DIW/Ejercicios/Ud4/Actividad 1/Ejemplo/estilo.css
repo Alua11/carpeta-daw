@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    width: 98vw;
+    padding: 1rem;
+}
+
+body {
+    border: solid 0.1rem black;
+}
+
+h1 {
+    padding-right: 1rem;
+}
+
+header {
+    font-size: 1.7em;
+    border-bottom: solid 0.2rem darkblue;
+    background-color: lightskyblue;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-text {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Se ha establecido un ancho fijo para que no varie */
+    width: 83rem;
+}
+
+.localizacion {
+    background-color: maroon;
+    display: flex;
+    align-items: center;
+}
+
+.localizacion button {
+    text-align: center;
+    font-family: Verdana, Helvetica;
+    font-weight: bold;
+    color: white;
+    background: #638cb5;
+    border-radius: 1.5rem;
+    width: 15rem;
+    padding: 1rem 0;
+    float: left;
+}
+
+.localizacion button::before {
+    content: "";
+    display: block;
+    background: url("./placeholder.svg") no-repeat;
+    width: 2rem;
+    height: 2rem;
+    float: left;
+    padding: 0;
+}
+
+.placeholder {
+    height: 50%;
+}
+
+#distribucion {
+    font-size: 1.7em;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+
+article {
+    width: 45%;
+}
+
+article img {
+    max-width: 100%;
+}
+
+aside {
+    width: 20%;
+}
+
+@media screen and (max-width: 1283px) {
+    html {
+        background-color: green;
+    }
+    header {
+        display:block;
+    }
+    .logo-text {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        background-color: purple;
+    }
+    aside {
+        display: none;
+    }
+    main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    html {
+        background-color: yellow;
+    }
+    main {
+        display: block;
+    }
+    article {
+        width: 100%;
+    }
+}
+
+

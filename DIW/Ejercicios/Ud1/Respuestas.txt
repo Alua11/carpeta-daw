@@ -1,0 +1,68 @@
+Ejercicio 1.
+PARA LA WEB: David Simon
+-Utiliza un contraste en blanco y negro con una tipografia 
+tipo sans serif.
+-El contenido se encuentra en una sola columna y todo centrado
+por lo que se puede decir que tiene cierta simetria.
+- Cada post se encuentra encerrado en un cuadrado como elemento divisiorio
+aunque estos cuadrados se encuentran sombreados causando una sensacion de
+volumen.
+- Utiliza el icono de una lupa, elemnto bastante reconocible para indicar
+el boton de busqueda.
+- En cuanto al titulo junto con el logo, apareciendo juntos en distintos
+planos y de forma asimetrica que constrasta con la simetria del resto de
+la web.
+PARA LA WEB: electric plup
+- La primera parte es asimetrica y tuliza colores corporativos en los botones
+contrastando el color azul para los botones de los que se quiere llamar la
+atencion.
+- Una vez avanzas en la web se muestra todo de forma mas simetrica en dos 
+columnas  con la informacion dividada en secciones que se intuyen dejando 
+pequeños espacios en blanco entre los post.
+
+
+Ejercicio 2.
+1. ¿Cuantos colores utiliza ?
+El Material Desing destaca por el uso de colores vibrantes sobre ambientes apagados
+y un guiño constante a la arquitectura.
+Colores
+La paleta de colores se inicia con colores primarios y se rellena con las 
+variaciones sugeridas para Android, Web y iOS. Los colores primarios, 
+denominados 500 por su pureza, vienen acompañados de combinaciones que van 
+del 50 -más claro- al 900 -más oscuro, con este material el diseñador puede 
+trabajar cómodamente limitando la selección a tres tonos de color de la paleta 
+de primaria y sus combinaciones de la paleta de secundaria.
+Se recomienda el uso de varios tonos de color para el texto. El texto principal 
+es el más intenso sobre el fondo blanco. Los textos secundarios se desvanecen. 
+El uso del canal alpha para la gestión de transparencias facilita el manejo de 
+este desvanecimiento en iconos y textos.
+Las barras de herramientas y los bloques de color más grandes deben usar el 
+color primario que coincide en el color principal de la aplicación. Los 
+elementos principales también heredan este color. La barra de estado debe ser 
+más oscura que su matiz de color primario. Los diferentes elementos de la interfaz 
+de usuario pueden tomar en diferentes partes del tema de color seleccionado.
+2. ¿Qué fuentes esta utilizando?
+Tipografía
+Roboto y Noto son el tipo estándar en Android. Google recomienda utilizar Roboto 
+para los idiomas que utilizan la escritura cirílica latín, griego, y Noto y para 
+todos los demás idiomas.
+Demasiados tamaños de letra y estilos a la vez pueden arruinar un diseño. El 
+conjunto básico de estilos se basan en una escala tipográfica de 12, 14, 16, 20 y 
+34. Para una mejor experiencia de usuario, se recomienda el uso del tipo dinámico, 
+que aplicado correctamente puede hacer los diseños más interesantes y ayudar a 
+los usuarios a descifrar el contenido con una simple ojeada. Los tamaños dinámicos 
+se apoyan en una escala tipográfica basada en las estimaciones del tamaño de espacio 
+disponibles. La altura de las líneas se han determinado en función del tamaño y el 
+peso individual de cada estilo.
+El texto que es del mismo color que el fondo es difícil de leer y el texto con 
+demasiado contraste puede deslumbrar. Por eso, el texto debe mantener una relación 
+de contraste mínima para su legibilidad.
+3. Lee las sección shape( forma). ¿Qué funciones realiza la forma en un interfaz?.
+https://material.io/design/shape/about-shape.html#shaping-material
+Ejercicio 3.
+
+Ejercicio 4.
+
+Ejercicio 6.
+
+Ejercicio 9.

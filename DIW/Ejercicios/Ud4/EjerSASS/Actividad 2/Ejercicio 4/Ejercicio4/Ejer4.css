@@ -1,0 +1,14 @@
+.factory {
+  zoom: 1;
+}
+.factory:before, .factory:after {
+  content: "";
+  display: table;
+}
+.factory:after {
+  clear: both;
+}
+
+.factory {
+  background: #fff;
+}/*# sourceMappingURL=Ejer4.css.map */

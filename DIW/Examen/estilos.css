@@ -1,0 +1,219 @@
+/* Reseteo basico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* El calculo seria: 10px*100/16px=62.5% */
+    font-size: 62.5%;
+    max-width: 114rem;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    padding: 3rem;
+}
+
+header {
+    border: 1px solid #777;
+    height: 90vh;
+    clip-path: polygon(0 90vh, 0 0, 95vw 0, 95vw 75vh);
+    background: linear-gradient(0deg, rgba(126, 213, 111, 0.5), rgba(126, 213, 111, 0.5)),
+        url(img/hero.jpg) 0 0 / cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+}
+
+header nav {
+    clear: both;
+    padding: 0.67em;
+    height: 8vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+}
+
+.text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.text h1, .text p, .text form {
+    padding: 2rem;
+}
+
+main {
+    display: block;
+    letter-spacing: 17;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+main section .titulo {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(0, 255, 59, 1) 0%, rgba(32, 131, 44, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.populares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 4rem;
+    perspective: 150rem;
+}
+
+.carta {
+    position: relative;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 2s;
+    transform-style: preserve-3d;
+}
+
+.text-figure,
+figcaption {
+    height: 100%;
+    width: 100%;
+}
+
+.text-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-figure h1 {
+    height: 50%;
+    text-align: right;
+    width: 100%;
+    padding: 1rem;
+}
+
+.carta h1 {
+    color: white;
+}
+
+.carta1 h1 {
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 75%);
+    background: radial-gradient(rgba(234, 201, 102, 0.7), rgba(237, 135, 11, 0.7)),
+        url(img/nat-1-large.jpg) 0 0 / cover;
+}
+
+.carta2 h1 {
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 75%);
+    background: radial-gradient(rgba(126, 213, 111, 0.7), rgba(126, 213, 111, 0.7)),
+        url(img/nat-2-large.jpg) 0 0 / cover;
+}
+
+.carta3 h1 {
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 75%);
+    background: radial-gradient(rgba(100, 155, 232, 0.7), rgba(42, 120, 229, 0.7)),
+        url(img/nat-3-large.jpg) 0 0 / cover;
+}
+
+.text-figure ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+
+.text-figure li {
+    display: inline-block;
+}
+
+figcaption {
+    /* hidden para que no se vea cuando esta detras */
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    /* Transform para que el figcaption este en la parte de detras */
+    transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    /* Dar forma a la parte posterior */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+figcaption .texto-precio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.figcaption1 {
+    background-image: linear-gradient(0deg, rgb(234, 201, 102), rgb(237, 135, 11));
+}
+
+.figcaption2 {
+    background-image: linear-gradient(0deg, rgb(126, 213, 111), rgb(126, 213, 111));
+}
+
+.figcaption3 {
+    background-image: linear-gradient(0deg, rgb(100, 155, 232), rgb(42, 120, 229));
+}
+
+figcaption a {
+    text-decoration: none;
+    color: black;
+}
+
+figure:hover {
+    transform: rotateY(180deg);
+}
+
+
+
+.btn,
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 3rem;
+    background-color: white;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 8px;
+    transition: all 1s;
+}
+
+.btn:active {
+    transform: translateY(1px);
+    outline: 1px solid;
+    transition: all 0.1s;
+}

@@ -1,0 +1,22 @@
+
+header,
+footer {
+  background: #a34e4f;
+  display: flex;
+  padding: 10px;
+}
+header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+footer {
+  border-top: 1px solid #e5e5e5;
+}
+
+main {
+  padding: 10px;
+}
+
+p {
+  font-size: smaller;
+}

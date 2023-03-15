@@ -1,0 +1,14 @@
+$size: 24px;
+
+.cambio {
+    $fuente: 'Helvetica, sans-serif';
+    font-size: $size;
+
+    @if $size == 12px {
+        $fuente: 'Arial, sans-serif';
+    } @else if $size == 24px {
+        $fuente: 'Georgia, serif';
+    }
+
+    font-family: $fuente;
+}

@@ -1,0 +1,8 @@
+.surveyor {
+    border: 1px solid #ccc;
+    padding: 20px;
+
+    .factory & {
+        padding: 30px;
+    }
+}

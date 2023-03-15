@@ -1,0 +1,30 @@
+.sidebar {
+  float: right;
+  width: 300px;
+}
+.users .sidebar .users .sidebar {
+  width: 400px;
+}
+
+.btn {
+  color: #444444;
+  display: block;
+}
+
+.btn-a {
+  color: #919191;
+}
+
+.btn-a:hover {
+  color: #aaaaaa;
+}
+
+.btn-a {
+  border-radius: 5px;
+  color: #777;
+}
+
+.btn-b {
+  border-radius: 5px;
+  color: #222;
+}/*# sourceMappingURL=aplicacion.css.map */

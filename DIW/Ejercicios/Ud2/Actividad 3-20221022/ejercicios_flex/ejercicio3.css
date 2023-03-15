@@ -1,0 +1,34 @@
+
+div {
+  border: 1px solid;
+}
+
+.promo-title {
+  margin: 0;
+}
+
+.promo-description {
+  margin-top: 8px;
+}
+
+body {
+  display: flex;
+  align-items: baseline;
+}
+
+.promo {
+  margin: 5px;
+  padding: 10px;
+  height: 300px;
+  display: flex;
+}
+
+.promo--start {
+  align-items: flex-start;
+}
+.promo--center {
+  align-items: center;
+}
+.promo--end {
+  align-items: flex-end;
+}

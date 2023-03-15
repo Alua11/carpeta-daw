@@ -1,0 +1,13 @@
+@mixin propiedades($bg: #fff) {
+    background: $bg;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.factoria {
+    @include propiedades;
+}
+
+.rascacielo {
+    @include propiedades(#797979);
+}

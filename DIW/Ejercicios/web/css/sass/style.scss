@@ -1,0 +1,24 @@
+@import "./abstracts/variables";
+@import "./abstracts/placeholders";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+
+@import "./base/base";
+@import "./base/typography";
+@import "./base/animations";
+@import "./base/utilities";
+
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/nav";
+
+@import "./abstracts/breakpoints";
+
+@import "./components/btn";
+@import "./components/heading";
+@import "./components/carta";
+@import "./components/logo";
+@import "./components/barra-busqueda";
+
+@import "./pages/home";

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Acme";
+    src: local("Acme"), url("./../assets/fonts/Acme-Regular.woff2") format("woff2"),
+        url("./../assets/fonts/Acme-Regular.eot") format("eot"), url("./../assets/fonts/Acme-Regular.woff") format("woff"),
+        url("./../assets/fonts/Acme-Regular.ttf") format("truetype"), url("./../assets/fonts/Acme-Regular.svg") format("html");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: local("Open Sans"), url("./../assets/fonts/Open-Sans.woff2") format("woff2"),
+        url("./../assets/fonts/Open-Sans.eot") format("eot"), url("./../assets/fonts/Open-Sans.woff") format("woff"),
+        url("./../assets/fonts/Open-Sans.ttf") format("truetype"), url("./../assets/fonts/Open-Sans.svg") format("html");
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    font-family: "Open Sans";
+}

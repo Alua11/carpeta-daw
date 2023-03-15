@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Informatica diw</title>
+</head>
+
+<body class="bg-body-pattern">
+    <header class="text-white bebas bg-black border-8 border-red-600 sm:borderyellow-400
+    md:border-green-600 lg:border-blue-600 xl:border-indigo-900 2xl:border-b-gray-700">
+        <div class="container xs:flex-col w-11/12 mx-auto flex flex-row items-center">
+            <div class="flex-1 bg-azul-claro" id="logo">
+                <div class="group overflow-hidden w-72 pt-0.5 pb-0.5 text-center tracking-wider
+                transition duration-100 rounded-sm bg-azul-claro hover:text-black hover: hover:bg-white">
+                    <span class="animate-spin-slow symbol group-hover:animate-none
+                    block float-left text-3xl mt-1 ml-11">S</span>
+                    <div class="invisible group-hover:visible">I'm here!</div>
+                    <h3 class="block group-hover:text-lg group-hover:animatemiWiggle float-right
+                    text-4xl mt-1.5 mr-14">INFORMÁTICA</h3>
+                </div>
+            </div>
+            <nav class="flex-1">
+                <ul class="flex flex-row h-20 items-center justify-end text-2xl textcenter mr-6">
+                    <li class="menu-item">
+                        <a class="menu-item-a" href="#">INICIO</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item-a" href="#">CONTACTO</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item-a" href="#">PERFIL</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container w-11/12 mx-auto mt-5 flex flex-row">
+        <aside id="lateral" class="order-2 basis-1/5">
+            <h3 class="aside-header">Buscar</h3>
+            <div class="bg-white drop-shadow-xl p-3 mb-4 mt-5">
+                <div id="search" class="w-11/12 h-7 m-2.5 mx-auto bg-white border border-gray-200
+                rounded shadow-inner">
+                    <form action="">
+                        <input class="w-10/12 h-6 border-none pl-1.5 rounded-md bgtransparent
+                        text-gray-500 transition duration-300 outline-none focus:outline-none" type="text" name=""
+                            id="" /><input type="button" value="L"
+                            class="symbol h-6 cursor-pointer text-base bg-transparent border-none text-gray-500 pl-2" />
+                    </form>
+                </div>
+            </div>
+            <h3 class="aside-header">Login</h3>
+
+            <div id="login" class="bg-white drop-shadow-xl p-3 mt-5">
+                <form action="">
+                    <div class="">
+                        <label for="email">Email</label>
+                        <input
+                            class="login-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="email" name="" id="" />
+                    </div>
+                    <div class="mt-5">
+                        <label for="password">Password</label>
+                        <input
+                            class="login-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="password" name="password" id="" />
+                    </div>
+                    <div class="mt-5">
+                        <input
+                            class="login-button border-2 border-black bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit" value="Entrar" />
+                        <input
+                            class="login-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="reset" value="Reiniciar" />
+                    </div>
+                </form>
+            </div>
+            <div>
+                <a href="#">Regístrate aquí</a> <br/>
+                <a href="#">¿Has olvidado tu contraseña? </a>
+            </div>
+        </aside>
+        <!-- FIN DE LA BARRA lateral -->
+        <section class=" basis-4/5 mr-10">
+            <h2 class="articles-header">Últimos artículos</h2>
+            <article class="article-item bg-white m-4 drop-shadow-xl border-gray-200 border-2">
+                <div class="article-data bg-black text-white float-right p-2 rounded-bl-lg">
+                    <span class="m-2.5">Fecha:10</span><span class="m-2.5">Categorías</span>
+                </div>
+                <h4 class="article-title text-2xl text-blue-600 ml-3">
+                    <a href="#">Título del artículo</a>
+                </h4>
+                <div class="content flex flex-row p-3">
+
+                    <figure class="article-figure">
+                        <img class="object-contain h-30 w-60" src="./recursos/img/tigre.webp " alt="Tigre" />
+                    </figure>
+                    <p class="article-description ml-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                        obcaecati accusamus facilis libero eveniet nemo architecto
+                        recusandae excepturi optio explicabo dolore voluptate quasi
+                        numquam
+                        dolorem repudiandae expedita similique saepe deserunt?
+                    </p>
+                </div>
+            </article>
+            <article class="article-item bg-white m-4 drop-shadow-xl border-gray-200 border-2">
+                <div class="article-data bg-black text-white float-right p-2 rounded-bl-lg">
+                    <span class="m-2.5">Fecha:10</span><span class="m-2.5">Categorías</span>
+                </div>
+                <h4 class="article-title text-2xl text-blue-600 ml-3"><a href="#">Título del artículo</a>
+                </h4>
+                <div class="content flex flex-row p-3">
+
+                    <figure class="article-figure">
+                        <img class="object-fill  h-40 w-55 " src="./recursos/img/pingu.webp" alt="Pingüino" />
+                    </figure>
+                    <p class="article-description ml-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                        obcaecati accusamus facilis libero eveniet nemo architecto
+                        recusandae excepturi optio explicabo dolore voluptate quasi
+                        numquam
+                        dolorem repudiandae expedita similique saepe deserunt?
+                    </p>
+                </div>
+            </article>
+            <article class="article-item bg-white m-4 drop-shadow-xl border-gray-200 border-2">
+                <div class="article-data bg-black text-white float-right p-2 rounded-bl-lg">
+                    <span class="m-2.5 ">Fecha:10</span><span class="m-2.5">Categorías</span>
+                </div>
+                <h4 class="article-title text-2xl text-blue-600 ml-3"><a href="#">Título del artículo</a>
+                </h4>
+                <p class="article-description ml-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                    obcaecati accusamus facilis libero eveniet nemo architecto
+                    recusandae excepturi optio explicabo dolore voluptate quasi
+                    numquam dolorem repudiandae expedita similique saepe deserunt?
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer id="footer" class="bg-black text-white h-80">
+        <div id="container">
+            <div id="info" class="footer-box">
+                <h5 class="footer-header">Desarrollado con</h5>
+                <p class="mb-6">
+                    <img class="block mx-auto"
+                        src="./recursos/img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" />
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- <body class="bg-body-pattern">
+    <header>
+        <div class="logo-text">
+            <figure>
+                <img src="./recursos/img/logo2.png" alt="logo">
+            </figure>
+            <h1>2ºDAW</h1>
+        </div>
+        <div class="localizacion">
+            <div>
+                <h3>Dirección</h3>
+                <p>Calle Mallorca, 02525, Cox, Alicante</p>
+            </div>
+            <button>Mapa</button>
+        </div>
+    </header>
+    <div id="distribucion">
+        <main>
+            <article>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <figure>
+                    <img src="./recursos/img/tigre.webp" alt="tigre">
+                </figure>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere fugiat nesciunt quod aperiam quia
+                    fuga
+                    sint quae, quas commodi ducimus voluptatibus quo ipsum saepe beatae, cupiditate recusandae
+                    accusantium
+                    sed voluptas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quis autem praesentium
+                    ex
+                    commodi dolorem. Accusantium officiis consectetur laboriosam voluptatum, aspernatur tempora velit,
+                    impedit commodi quibusdam facere sit? Debitis, ab. Lorem ipsum dolor sit amet, consectetur
+                    adipisicing
+                    elit. Voluptatem, quibusdam. Labore ullam inventore incidunt, nisi, adipisci doloribus iure amet vel
+                    voluptatum natus perferendis qui officiis deleniti blanditiis reiciendis. Possimus, impedit?</p>
+            </article>
+            <article>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <figure>
+                    <img src="./recursos/img/pingu.webp" alt="pingüino">
+                </figure>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere fugiat nesciunt quod aperiam quia
+                    fuga
+                    sint quae, quas commodi ducimus voluptatibus quo ipsum saepe beatae, cupiditate recusandae
+                    accusantium
+                    sed voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae atque molestiae
+                    perferendis, esse a eum facere vel voluptas deserunt neque, quis deleniti doloribus quidem nulla
+                    provident consequatur non veniam ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Soluta qui sint reiciendis alias, veritatis officia repudiandae quisquam exercitationem doloribus
+                    optio, voluptates tempora nisi fugiat! Ea neque beatae voluptas earum repudiandae.</p>
+            </article>
+        </main>
+        <aside>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
+                obcaecati illo voluptas recusandae, ipsam officiis dolore, pariatur esse soluta totam non aliquam illum
+                quia
+                unde labore nisi earum, nihil sapiente?</p>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                eum
+                alias facilis accusamus est recusandae ab! Praesentium quod nihil ducimus, asperiores aliquid ullam ab
+                repudiandae ratione ea temporibus enim totam?</p>
+        </aside>
+    </div>
+
+</body> -->
+
+</html>

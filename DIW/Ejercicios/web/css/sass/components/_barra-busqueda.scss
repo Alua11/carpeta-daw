@@ -1,0 +1,30 @@
+.barra-busqueda {
+    width: 100%;
+    margin: 1rem;;
+}
+
+.barra__input {
+    position: relative;
+    height: 5rem;
+
+    input {
+        border: none;
+        border-radius: 0.5rem;
+        height: 100%;
+        width: 100%;
+    }
+
+    .lupa {
+        width: 3rem;
+        position: absolute;
+        top: 25%;
+        left: 90%;
+    }
+}
+
+.icono {
+    justify-self: end;
+    img {
+        height: 3rem;
+    }
+}

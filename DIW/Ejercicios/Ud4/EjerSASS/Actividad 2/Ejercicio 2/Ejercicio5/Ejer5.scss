@@ -1,0 +1,15 @@
+$side: left;
+.girder {
+    border-#{$side}: 4px solid #ccc;
+
+    h2 {
+        font-size: 24px;
+    }
+}
+.notice {
+    border-#{$side}: 8px solid #797979;
+
+    a {
+        color: #222;
+    }
+}

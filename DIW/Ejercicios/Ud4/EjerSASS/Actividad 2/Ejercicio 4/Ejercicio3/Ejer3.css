@@ -1,0 +1,13 @@
+.socket, .bolt, .wrench {
+  border-radius: 50%;
+  padding: 15px;
+  width: 30px;
+}
+
+.wrench {
+  width: 100px;
+}
+
+.bolt {
+  padding: 14px;
+}/*# sourceMappingURL=Ejer3.css.map */

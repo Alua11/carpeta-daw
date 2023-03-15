@@ -1,0 +1,17 @@
+$color: #797979;
+
+.surveyor {
+    border: 1px solid $color;
+    padding: 20px;
+}
+
+.surveyor h2 {
+    color: $color;
+    font-size: 18px;
+}
+
+.notice {
+    background: yellow;
+    border: 5px solid $color;
+    padding: 10px;
+}

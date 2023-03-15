@@ -1,0 +1,55 @@
+/* Ejercicio 3 */
+
+caption {
+    caption-side: bottom;
+}
+
+
+table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+table, th, td{
+    border-collapse: collapse;
+}
+table {
+    border:2px dotted red;
+}
+tr:not(tr:first-child) {
+    border-top: 2px dashed blueviolet;
+}
+td:not(.celda-vacia) {
+    border-left:2px solid purple;
+}
+th, td, caption {
+    padding: 0.5em;
+}
+
+td::first-line {
+    background-color: aquamarine;
+}
+
+tr:nth-of-type(2n+1) {
+    background: lightcyan;
+}
+tr:nth-of-type(2n) {
+    background: lightyellow;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: lightcoral;
+}
+nav a:visited {
+    color: lightgoldenrodyellow;
+}
+nav a:hover {
+    font-size: 1.5em;
+}
+nav a:active {
+    color: coral;
+}

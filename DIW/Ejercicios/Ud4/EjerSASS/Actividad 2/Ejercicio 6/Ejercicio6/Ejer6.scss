@@ -1,0 +1,13 @@
+$context: 960px;
+
+.factory {
+    background: #fff;
+    width: percentage(600px/$context);
+    //percentage, puede truncar el resultado.
+    //Entonces puede que la suma total de todos %, no se 100
+    //dando lugar a un resultado inexacto.
+}
+.highrise {
+    background: #797979;
+    width: percentage(300px/$context);
+}

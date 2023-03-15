@@ -1,0 +1,10 @@
+$color-base: #797979;
+
+.modal {
+    background: rgba($color-base, 0.75);
+    border: 1px solid $color-base;
+    padding: 20px;
+}
+
+//Si se puede sustituir una cosa por la otra.
+//Lo transforma de manera automatica.

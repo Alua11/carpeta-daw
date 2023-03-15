@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto con Planeta Azul" />
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="Contacto-main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes/tierra.jpg">
+    <title>Planeta Azul - Contacto</title>
+</head>
+
+<body>
+    <header>
+        <div class="tabla">
+            <div class="izquierda">
+                <img src="imagenes/tierra.jpg" alt="Planeta Tierra">
+                <h1>Planeta Azul</h1>
+            </div>
+            <div class="derecha">
+                <input type="text" placeholder="buscar" size="15">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Proyectos.html">Proyectos</a></li>
+                <li><a href="Acciones.html">Acciones</a></li>
+                <li><a href="Reportajes.html">Reportajes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contacto">
+        <h2>Contacta con nosotros</h2>
+        <form method="post" action="Contacto.html" enctype="multipart/form-data">
+            <div>
+                <label>Nombre</label>
+                <input type="text" name="nombre" id="nombre" pattern="[A-Z]?[a-z0-9]{1,30}" placeholder="Jose Antonio" maxlength="30" autofocus
+                    required>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" id="email" pattern="[A-Za-z0-9]+@[A-Za-z]+.[a-z0-9]{1,4}" placeholder="jantonio@dominio.com" required>
+            </div>
+            <div>
+                <label>Edad</label>
+                <input type="number" name="edad" id="edad" pattern="((1[8-9]) | ([2-9][0-9]))" min="18" max="99" placeholder="18" required>
+            </div>
+            <div>
+                <label>Telefono</label>
+                <input type="tel" name="telefono" id="telefono" pattern="[0-9]{9}" placeholder="555555555" required>
+            </div>
+            <div>
+                <label>Consulta</label>
+                <textarea rows="5" cols="20" name="consulta" id="consulta" placeholder="Escribe tu consulta aqui..."
+                    required></textarea>
+            </div>
+            <div>
+                <label>Archivos a adjuntar</label>
+                <input type="file" name="archivos" id="archivos" multiple>
+            </div>
+            <div>
+                <input type="checkbox" value="acepta" name="acepta" id="acepta" required>
+                <label for="acepta" id="politicas">Acptar politica de privacidad y cookies.</label>
+            </div>
+            <div>
+                <label></label>
+                <input type="submit" name="enviar" id="enviar" value="Enviar">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <small>Sitio creado por MiEstampa©|2015</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+.carta {
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    min-height: -webkit-fill-available;
+
+    &__img {
+        max-width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}

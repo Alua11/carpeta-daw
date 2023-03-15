@@ -1,0 +1,25 @@
+//Vendors se pone al principio en caso de trabajar con determinados framework.
+//@import "vendors/";
+
+@import "./abstracts/variables";
+@import "./abstracts/placeholders";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+
+@import "./base/base";
+@import "./base/typography";
+@import "./base/animations";
+@import "./base/utilities";
+
+@import "./layout/grid";
+
+@import "./components/btn";
+@import "./components/heading-primary";
+@import "./components/heading-secondary";
+@import "./components/heading-tertiary";
+@import "./components/box";
+
+@import "./pages/home";
+
+//Vendors se pone al final, en caso de no usar ningun framework que requiera importarse antes.
+//@import "vendors/";

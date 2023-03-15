@@ -1,0 +1,18 @@
+/*Ejercicio 2 */
+
+p::before {
+    content: counter(count, upper-alpha) ') ';
+}
+p {
+    counter-increment: count 1;
+}
+
+@counter-style flecha {
+    system: cyclic;
+    symbols: \21C9;
+    suffix: " ";
+}
+
+ul {
+    list-style: flecha;
+}

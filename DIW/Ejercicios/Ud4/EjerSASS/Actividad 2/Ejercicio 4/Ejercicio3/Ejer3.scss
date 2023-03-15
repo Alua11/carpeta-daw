@@ -1,0 +1,25 @@
+// .socket, .wrench, .bolt {
+//     border-radius: 50%;
+//     padding: 15px;
+//     width: 30px;
+// }
+// .wrench {
+//     width: 100px;
+// }
+// .bolt {
+//     padding: 14px;
+// }
+
+.socket {
+    border-radius: 50%;
+    padding: 15px;
+    width: 30px;
+}
+.wrench {
+    @extend .socket;
+    width: 100px;
+}
+.bolt {
+    @extend .socket;
+    padding: 14px;
+}

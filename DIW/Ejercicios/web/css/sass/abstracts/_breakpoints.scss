@@ -1,0 +1,76 @@
+@media (max-width: 890px) {
+    .oculto-1 {
+        display: none;
+    }
+
+    header {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 750px) {
+    .nav--secondary {
+        display: none;
+    }
+
+    .nav--primary {
+
+        .logo__img,
+        .logo__text {
+            display: none;
+        }
+        .row {
+            display: block;
+            padding: 0.5rem;
+            height: auto;
+        }
+    }
+
+    .aventura {
+        .row {
+            display: block;
+        }
+        .img {
+            display: block;
+            max-width: 20rem;
+            margin: 0 auto;
+        }
+        &>article {
+            padding: 5rem;
+            &>div {
+                margin: 2rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 620px) {
+    .resenyas {
+        .row {
+            display: block;
+        }
+
+        &>article {
+            padding: 5rem;
+
+            &>div {
+                margin: 2rem;
+            }
+        }
+    }
+
+    footer {
+        .coberturas {
+            display: none;
+        }
+        .row {
+            display: block;
+        }
+        .logo__img {
+            width: 15rem;
+            margin: 0 auto;
+        }
+    }
+
+}

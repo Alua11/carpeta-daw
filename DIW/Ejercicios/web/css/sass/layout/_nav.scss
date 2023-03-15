@@ -1,0 +1,37 @@
+.nav {
+    &--primary {
+
+        border-bottom: solid 1px white;
+        height: 8%;
+
+        &>div {
+            height: 100%;
+        }
+
+        li {
+            display: inline-block;
+        }
+        a {
+            padding: 1rem;
+        }
+    }
+
+    &--secondary {
+        height: 8%;
+        padding: 1rem;
+
+        ul {
+            justify-items: center;
+        }
+
+        a {
+            padding: 0rem 0rem;
+        }
+    }
+
+    &__links a {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;;
+    }
+}

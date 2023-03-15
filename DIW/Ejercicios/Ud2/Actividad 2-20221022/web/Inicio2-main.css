@@ -1,0 +1,17 @@
+main {
+    display: table;
+    background-image: url("imagenes/columnas.png");
+    background-repeat: round;
+    background-size: cover;
+}
+main section {
+    padding: 0.67em;
+}
+
+main .izquierda, main .derecha {
+    display: table-cell;
+}
+
+main .izquierda {
+    width: 66.6%;
+}

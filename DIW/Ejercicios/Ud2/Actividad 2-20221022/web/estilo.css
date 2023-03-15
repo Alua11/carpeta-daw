@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    height: 151px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header div {
+    padding: 0.67em;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+header .float-right input {
+    margin-top: 36px;
+}
+nav {
+    clear: both;
+    padding: 0.67em;
+    background-color: lightblue;
+}
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+main {
+    padding: 0.67em;
+    background-image: url("imagenes/columnas.png");
+    background-repeat: round;
+    background-size: cover;
+    overflow: hidden;
+}
+main .float-left{
+    width: 66%;
+}
+main .float-right {
+    width: 32%;
+}
+footer{
+    padding: 0.32em;
+    background-color: gray;
+    color: white;
+}

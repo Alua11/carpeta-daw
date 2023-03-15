@@ -1,0 +1,20 @@
+Ejercicio 2
+Al realizar la validacion con la extension y luego en https://validator.w3.org/, nos damos cuenta
+de que el validador es mucho mas estricto que la extension, te muestra tambien los warnings, tambien
+te muestra notas sobre cosas que no son necesarias y mucha mas informacion.
+
+Ejercicio 3
+1. ¿El contenido copiado afecta al posicionamiento de la web en el buscador?
+Si
+2. ¿Afecta en el posicionamiento la utilización de http en lugar de https?
+Si
+3. ¿Cuál de las dos URL son mejores y por qué?
+https://www.brandonsbaseballcards.com/folder1/22447478/x2/14032015.html
+https://www.brandonsbaseballcards.com/article/ten-rarestbaseball-cards.html
+La segunda es mejor, puesto que al leer la url, te da informacion sobre el lugar al que accedes,
+mientras que la primera ves nombres genericos o numeros que no indican nada al usuario.
+4. ¿Qué es Search Console?
+Es un conjunto de herramientas que google proporciona para conseguir que una web destaque en los resultados de busqueda.
+
+Ejercicio 4
+Los cambios han sido realizados, cumplo todos los factores html.

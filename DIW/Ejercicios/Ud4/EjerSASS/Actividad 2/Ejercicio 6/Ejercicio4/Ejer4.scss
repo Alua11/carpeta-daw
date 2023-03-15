@@ -1,0 +1,10 @@
+$theme: modern;
+$font: "serif";
+
+@if $theme ==modern {
+    $font: "sans-"+$font;
+}
+
+.sign {
+    font-family: $font;
+}

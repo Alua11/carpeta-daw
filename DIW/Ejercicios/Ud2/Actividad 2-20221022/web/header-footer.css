@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header .tabla {
+    display: table;
+    width: 100%;
+    padding: 0.67em;
+}
+header .izquierda, header .derecha {
+    display: table-cell;
+}
+header .derecha {
+    text-align: right;
+}
+
+
+header nav {
+    clear: both;
+    padding: 0.67em;
+    background-color: lightblue;
+}
+header nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+footer {
+    padding: 0.32em;
+    background-color: gray;
+    color: white;
+}

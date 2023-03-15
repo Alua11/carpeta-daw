@@ -1,0 +1,10 @@
+a {
+  color: #3097b4;
+  text-decoration: underline;
+}
+a:hover {
+  color: #cf684b;
+}
+a:active {
+  color: #335a65;
+}/*# sourceMappingURL=Ejer10.css.map */

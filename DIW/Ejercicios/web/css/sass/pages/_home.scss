@@ -1,0 +1,17 @@
+main {
+    text-align: center;
+}
+
+.aventura {
+    &--1 {
+        background-color: lightsalmon;
+    }
+
+    &--2 {
+        background-color: lightblue;
+    }
+
+    &--3 {
+        background-color: lightgreen;
+    }
+}

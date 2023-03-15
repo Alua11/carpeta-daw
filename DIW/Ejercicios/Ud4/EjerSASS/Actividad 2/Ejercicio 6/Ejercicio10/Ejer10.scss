@@ -1,0 +1,14 @@
+$color-link: #3097b4;
+
+a {
+    color: $color-link;
+    text-decoration: underline;
+
+    &:hover {
+        color: invert($color-link);
+    }
+
+    &:active {
+        color: desaturate(darken($color-link, 15%), 25%);
+    }
+}

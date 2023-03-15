@@ -1,0 +1,24 @@
+.btn {
+    color: #444444;
+    display: block;
+}
+
+.btn-a {
+    color: #919191;
+}
+
+.btn-a:hover {
+    color: #aaaaaa;
+}
+
+$rounded: 3px !default;
+
+.btn-a {
+    border-radius: $rounded;
+    color: #777;
+}
+
+.btn-b {
+    border-radius: $rounded;
+    color: #222;
+}

@@ -1,0 +1,10 @@
+// $ancho * 9 / 16
+@function aspecto ($ancho) {
+    @return $ancho * 9 / 16;
+}
+
+.intro {
+    background: #000;
+    width: 500px;
+    height: aspecto(500px);
+}

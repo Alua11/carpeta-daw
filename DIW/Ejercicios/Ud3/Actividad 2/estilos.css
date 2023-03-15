@@ -1,0 +1,342 @@
+li {
+    display: inline-block;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    min-width: 5em;
+    text-align: center;
+    padding: 0.2em;
+}
+
+#ejer1 li {
+    margin-right: 20px;
+}
+
+#ejer1 a {
+    /* border: 1px solid black; */
+    background: lightyellow;
+    transition: background 1s linear, color 1s linear;
+}
+
+#ejer1 a:hover {
+    color: white;
+    background: lightblue;
+}
+
+
+
+#ejer2 a {
+    border-left: 0em solid;
+    transition: border-left-width 1s linear;
+}
+
+#ejer2 li:first-child a {
+    border-left-color: blue;
+}
+
+#ejer2 li:nth-child(2) a {
+    border-left-color: yellow;
+}
+
+#ejer2 li:last-child a {
+    border-left-color: red;
+}
+
+#ejer2 a:focus {
+    border-left: 1em solid;
+}
+
+
+
+#ejer3 {
+    display: flex;
+}
+
+#ejer3 figure {
+    display: flex;
+    flex-direction: column;
+}
+
+#ejer3 img {
+    width: 200px;
+    height: 150px;
+}
+
+#ejer3 figcaption {
+    background: rgba(30, 30, 30, 0.5);
+    padding: 0.3em;
+    color: white;
+    font-style: italic;
+    position: relative;
+    top: 0;
+    transition: top 1s linear;
+}
+
+#ejer3 figure:hover figcaption {
+    top: 1.75em;
+}
+
+
+
+#ejer4 {
+    margin: 1em;
+    background: #fff url("imagenes/luis-poletti-17300.jpg") center center / cover;
+    width: 150px;
+    height: 200px;
+}
+
+#ejer4 img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s linear;
+}
+
+#ejer4 img:hover {
+    opacity: 0;
+}
+
+
+
+#ejer4-2 {
+    margin: 1em;
+    width: 150px;
+    height: 200px;
+    position: relative;
+}
+
+#ejer4-2 img:last-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#ejer4-2 img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s linear;
+}
+
+#ejer4-2 img:hover {
+    opacity: 0;
+}
+
+
+
+#ejer4-3 {
+    margin: 1em;
+    background: #fff url("imagenes/luis-poletti-17300.jpg") center center / cover;
+    width: 150px;
+    height: 200px;
+    transition: background 1s linear;
+}
+
+#ejer4-3:hover {
+    background: #fff url("imagenes/luca-bravo-149740.jpg") center center / cover;
+}
+
+
+
+
+#ejer5 img {
+    width: 150px;
+    height: 150px;
+}
+
+#ejer5 ul {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+}
+
+#ejer5 li:nth-child(2n) {
+    grid-area: 1 / 2 / -1 / 3;
+}
+
+#ejer5 li:nth-child(2n) img {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+#ejer5 li:nth-child(2n) img {
+    width: 300px;
+    height: 300px;
+}
+
+#ejer5 li:hover+li img {
+    opacity: 1;
+}
+
+
+
+#ejer5b {
+    height: 600px;
+    margin: 3em;
+}
+
+#ejer5b img {
+    width: 150px;
+    height: 150px;
+}
+
+#ejer5b ul {
+    position: relative;
+}
+
+#ejer5b li {
+    position: absolute;
+}
+
+#ejer5b li:nth-child(3) {
+    top: 200px;
+}
+
+#ejer5b li:nth-child(5) {
+    top: 400px;
+}
+
+#ejer5b li:nth-child(2n) {
+    height: 400px;
+    top: 0px;
+    left: 500px;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+#ejer5b li:nth-child(2n) img {
+    position: relative;
+    top: 100px;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+
+#ejer5b li:target {
+    opacity: 1;
+}
+
+
+
+@keyframes blowup {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    30% {
+        width: 340px;
+        height: 0;
+        opacity: 1;
+    }
+
+    60% {
+        width: 340px;
+        height: 280px;
+        opacity: 1;
+        margin: 20px;
+    }
+
+    100% {
+        width: 340px;
+        height: 280px;
+        opacity: 1;
+        margin: 20px;
+    }
+}
+
+#ejer6 {
+    height: 600px;
+    margin: 3em;
+}
+
+#ejer6 img {
+    width: 150px;
+    height: 150px;
+}
+
+#ejer6 ul {
+    position: relative;
+    height: 560px;
+}
+
+#ejer6 li {
+    position: absolute;
+}
+
+#ejer6 li:nth-child(2n+1) {
+    height: 100%;
+    width: 100%;
+}
+
+#ejer6 li:nth-child(3) {
+    top: 200px;
+}
+
+#ejer6 li:nth-child(5) {
+    top: 400px;
+}
+
+#ejer6 li:nth-child(2n) {
+    top: 0px;
+    left: 500px;
+}
+
+#ejer6 li:nth-child(2n) img {
+    height: 0;
+}
+
+#ejer6 li:target img {
+    animation: blowup 5s linear 0s;
+    width: 340px;
+    height: 280px;
+    margin: 20px;
+}
+
+#ejer6 li:nth-child(2n):target {
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.3);
+    
+}
+
+
+
+
+
+#ejer7 {
+    display: flex;
+}
+
+#ejer7 figure {
+    position: relative;
+    height: 150px;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 2s;
+    transform-style: preserve-3d;
+}
+
+#ejer7 img {
+    height: 100%;
+    width: 100%;
+}
+
+#ejer7 figcaption {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    /* Transform para que el figcaption este en la parte de detras */
+    transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(circle, rgba(218, 188, 179, 0.7) 0%, rgba(113, 88, 59, 1) 100%);
+    text-align: center;
+    color: white;
+}
+
+#ejer7 figure:hover {
+    transform: rotateY(180deg);
+}

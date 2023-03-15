@@ -1,0 +1,11 @@
+.notice {
+  background: yellow;
+  border: 5px solid #000;
+  padding: 20px;
+}
+.notice a {
+  color: #222;
+}
+.notice a:hover {
+  color: #313131;
+}/*# sourceMappingURL=Ejer6.css.map */

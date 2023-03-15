@@ -1,0 +1,22 @@
+main table, main th, main td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+main .celda-vacia {
+    border-top: 0;
+    border-left: 0;
+}
+
+
+main .pro1 {
+    background-color: lightblue;
+}
+main .pro2 {
+    background-color: lightgreen;
+}
+main .pro3 {
+    background-color: lightpink;
+}
+main .pro4 {
+    background-color: lightyellow;
+}

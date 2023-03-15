@@ -1,0 +1,35 @@
+.row {
+    max-width: $row-width;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat($grid-columns, minmax(min-content, calc($row-width / $grid-columns)));
+    grid-gap: $grid-gutter;
+    margin: 0 auto;
+}
+
+.col- {
+    @for $i from 1 through ($grid-columns - 1) {
+        &#{$i}-#{$grid-columns} {
+            grid-column: span $i;
+        }
+    }
+}
+.col-start- {
+    @for $i from 1 through ($grid-columns - 1) {
+            &#{$i} {
+                grid-column-start: $i;
+            }
+        }
+}
+
+.col-end- {
+    @for $i from 2 through $grid-columns + 1 {
+        &#{$i} {
+            grid-column-end: $i;
+        }
+    }
+}
+
+.arriba {
+    align-self: start;
+}

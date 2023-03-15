@@ -1,0 +1,17 @@
+$mod-padding: 10px !default;
+
+.modal {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: $mod-padding;
+}
+.modal-title {
+    border-bottom: 1px solid #ccc;
+    font-size: 24px;
+    padding: $mod-padding;
+}
+.modal-action {
+    background: purple;
+    display: block;
+    padding: $mod-padding;
+}

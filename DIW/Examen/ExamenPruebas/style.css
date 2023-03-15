@@ -1,0 +1,325 @@
+/* Utilización del selector universal para hacer un reset de las propiedades*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Se establece la fuente en distintos formatos */
+@font-face {
+  font-family: "BebasNeue";
+  src: local("BebasNeue"), url("/fonts/BebasNeue-webfont.woff2") format("woff2"),
+    url("/fonts/BebasNeue-webfont.eot") format("eot"), url("/fonts/BebasNeue-webfont.woff") format("woff"),
+    url("/fonts/BebasNeue-webfont.ttf") format("truetype");
+}
+
+/* Establecemos la tipología de letra y su color para todos los
+elementos de nuestra página */
+html {
+  /* Con este porcentaje, el font-size, se quda en 10px, ya que el navegador,
+  por defecto, suele tener 16px */
+  /* El calculo seria: (tama;o deseado)*100/(tama;o fuent navegador) */
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+}
+
+/* Cómo haríamos para tener dos elementos de fondo, en el header, 
+que sean triangulares y que ocupen toda la pantalla. 
+Pistas:
+background-image
+clip-path
+medidas --> vh,vw
+  */
+.header {
+  border: 1px solid #777;
+  height: 90vh;
+  clip-path: polygon(0 90vh, 0 0, 95vw 0, 95vw 75vh);
+  background: linear-gradient(0deg, rgba(126, 213, 111, 0.5), rgba(126, 213, 111, 0.5)),
+    url(img/hero.jpg) 0 0 / cover;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+header nav {
+  clear: both;
+  padding: 0.67em;
+  height: 8vh;
+  display: flex;
+  justify-content: flex-end;
+}
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+/* Ten en cuenta que si la sección .section-about tiene un background,
+el triangulo que queda en el header está con el color del body. La
+solución es subir esta sección hasta que se rellene el triangulo. */
+
+
+/* Método para centrar el texto en la página  */
+.text-box {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header-primary {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  backface-visibility: hidden;
+  margin-bottom: 2rem;
+}
+
+/* De que manera realizaríamos este tipo de animación */
+.main {
+  display: block;
+  font-size: 38px;
+  letter-spacing: 17;
+}
+
+.sub {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -22.5vh;
+  padding: 30rem 0;
+}
+
+/* El heading secundario debe estar alineado en el centro y
+además dentro del texto tiene que tener un degradado. También,
+como vemos el texto se deforma y se hace más grande cuando
+pasamos el ratón por encima.  
+pistas:
+background-clip.
+skew, scale;
+*/
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 35px;
+  background: linear-gradient(90deg, rgba(0,255,59,1) 0%, rgba(32,131,44,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.5s;
+
+}
+
+.heading-secondary:hover {
+  transform: scale(1.15) skew(10deg, 6deg);
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* grid. Colócalos como se ve en la imagen  */
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+/* .col1 {} */
+
+/* .col2 {} */
+
+/*utilidades de como centrar */
+/* .center-text {} */
+
+/*Botones*/
+
+/* El botón tiene que parecer que se hunde cuando hacemos click,
+para ello cuando nos superponemos encima con el ratón hay que
+modificar  su posición, para que cuando hagamos click, volvamos
+a modificar su posición */
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 8px;
+  outline: 3px solid;
+  transition: all 1s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  outline: 1px solid;
+  transition: all 0.1s;
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+/* Necesitamos dar un tamaño y posición a todas las fotos. Además,
+cuando pasamos el ratón por encima de una de ella se produce un
+escalado de ella agrandándola con una linea por fuera y las demás
+haciéndolas más pequeñas.
+
+Pistas:
+- outline:
+- translateY
+- box-shadow:
+- z-index
+- pseudoelemento :not
+
+*/
+
+.composition {
+  position: relative;
+  left: 10%;
+  perspective: 1500px;
+}
+
+.composition__photo {
+  width: 250px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+/* .composition__photo--p1 {} */
+
+.composition__photo--p2 {
+  top: 30px;
+  left: 200px;
+}
+
+.composition__photo--p3 {
+  top: 90px;
+  left: 90px;
+}
+
+.composition__photo:hover {
+  z-index: 100;
+  transform: translateY(-15px) scale(1.1);
+  outline: 8px solid #1ad151;
+  outline-offset: 12px;
+  border-radius: 2rem;
+  transform: rotateY(180deg);
+}
+
+.composition:hover .composition__photo:not(:hover) {
+  transform: translateY(5px) scale(0.9);
+
+}
+
+/* Animaciones.   */
+
+@keyframes moveToLeft {}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 1;
+  }
+  80%{
+    transform: translateX(5px);
+
+  }
+  100% {
+    transform: translateX(0);
+
+  }
+}
+
+
+@keyframes moveToTop {}
+
+/* <section><a class="btn"><span class="top content">¡compralo ahora ! </span><span class="bottom content">por solo 59€ </span></a>avanzados.md 3/11/2022 </section><style>.btn {
+  background-color: #00a0d6;
+  color: #fff;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  font: 16px arial, sans-serif;
+  transition: background-color 1s;
+  transition: background-color 0.4s , color 0.4s ;
+  más de una
+propiedad
+  transition: all 0.4s;
+  position: relative;
+  display: inline-block;
+  line-height: 3;
+  overflow: hidden;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+}
+
+. btn:hover {
+  background-color: red;
+}
+
+s pan.content {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+. content {
+  position: absolute;
+  transition: top 1s;
+}
+
+. top {
+  top: 0px;
+}
+
+. bottom {
+  top: 100px;
+}
+
+. btn:hover .top {
+  top: -50px;
+}
+
+. btn:hover .bottom {
+  top: 0px;
+}
+
+</style> */

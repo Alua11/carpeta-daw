@@ -1,0 +1,12 @@
+$gutter: 20px;
+
+.factory {
+    background: #fff;
+    margin-right: $gutter;
+    width: 600px - $gutter;
+}
+.highrise {
+    background: #797979;
+    margin-right: $gutter;
+    width: 300px -$gutter;
+}

@@ -1,0 +1,41 @@
+.album {
+    position: relative;
+    height: 50%;
+}
+
+.album-foto {
+    padding: 0.8rem 0.8rem 2.3rem 0.8rem;
+    position: absolute;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.album-foto img {
+    height: 100%;
+    width: 100%;
+}
+
+.album--1 {
+    height: 14rem;
+    width: 21rem;
+    top: 3rem;
+    left: 1rem;
+    transform: rotate(7.5deg);
+}
+
+.album--2 {
+    height: 18.5rem;
+    width: 28rem;
+    top: 12rem;
+    left: 13rem;
+    transform: rotate(-4.5deg);
+    z-index: 1;
+}
+
+.album--3 {
+    height: 16rem;
+    width: 23rem;
+    top: 2rem;
+    left: 33rem;
+    transform: rotate(-5deg);
+}

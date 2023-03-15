@@ -1,0 +1,8 @@
+// Simplificalo con @each
+
+$tools: 'socket' 'wrench' 'bolt';
+@each $tool in $tools {
+    .tool-#{$tool} {
+        background: url($tool+".png") no-repeat;
+    }
+}

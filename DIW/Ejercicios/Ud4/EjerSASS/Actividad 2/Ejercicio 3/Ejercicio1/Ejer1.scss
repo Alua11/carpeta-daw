@@ -1,0 +1,15 @@
+// background: #fff;
+// border: 1px solid #ccc;
+// padding: 10px;
+@mixin propiedades {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.factoria {
+    @include propiedades();
+}
+
+.rascacielo {
+    @include propiedades();
+}
