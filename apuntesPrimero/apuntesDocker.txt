@@ -1,0 +1,50 @@
+Una imagen tiene como caracteristicas de ser unicamente de lectura.
+
+Un docker, es de lectura y escritura.
+
+Se puede editar una imagen con un dockerfile y crear una imagen nueva con la informacion que se ha cambiado.
+Comando para crear la imagen: docker build . -t nombreimagen
+El nombre de la imagen nueva, tiene que estar en minusculas.
+Si pones : despues del nombre de la imagen, lo que escribas despues de : sera la etiqueta que le asignas.
+
+docker rm nombreContenedor -> borra contenedores, imagenes o lo que sea.
+docker run --rm nombreContenedor -> Arranca un contedor y borra el contenedor cuando lo detienes.
+
+docker run -v ... Ejecuta un contenedor junto con un volumen.
+
+rpm i -> Crea una carpeta node ...
+COPY copia todo lo de un directorio en otro directorio.
+
+Iniciar un contenedor desde una imagen en un servidor (-p) en segundo plano (-d):
+docker run -d -p 3000:80 nombreimagen
+
+Iniciar un contenedor como el anterior pero con un volumen sin nombre
+docker run -d -p 3000:80 -v /app/node_modules nombreimagen
+
+
+RUN es un comando de la imagen
+CMD es un comando del contenedor
+
+
+
+---Conectar un contenedor con node a un contenedor con mongodb utilizando una red---
+1. Se crea una red
+docker network create nombre_red
+-Podemos comprobar que se ha creado correctamente con: docker network ls
+2. Se crea un contenedor con mongodb, en este caso, con la imagen por defecto
+docker run --name nombre_contenedor1 --network nombre_red -d mongo
+-Podemos comprobar que se ha creado he iniciado correctamente con: docker ps
+3. Se crea la imagen de node con el archivo dockerflie que hemos creado
+-Hay que comprobar que en el js, que en la conexion con la base de datos, aparezca
+    el nombre del contenedor, en lugar de localhost.
+-Vamos a la carpeta en la que se encuentra en docker file: cd direccion/de/la/carpeta
+-Creamos la imagen: docker build . -t nombre_imagen
+4. Creamos el contenedor desde nuestra nueva imagen
+docker run --name nombre_contenedor2 --network nombre_red -d -p 80:80 nombre_imagen
+-Comprobamos que se ha creado y que estan los dos contenedores iniciados: docker ps
+-Comprobamos si estan conectados con: docker logs nombre_contenedor2
+
+---Conectar el backend que hemos creado con un frontend---
+5. Se crea una imagen de node con un dockerfile para el frontend
+-Vamos a la carpeta en la que se encuentra en docker file: cd direccion/de/la/carpeta
+-Creamos la imagen: docker build . -t nombre_imagen
