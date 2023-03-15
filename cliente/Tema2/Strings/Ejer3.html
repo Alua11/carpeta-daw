@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+    <h2>Ejercicio 3</h2>
+    <input id="myInput" type="text" value="Hola (que) tal">
+    <button onclick="leeEntreParentesis()">Cortar frase</button>
+    <p id="demo"></p>
+
+
+    <script>
+
+        function leeEntreParentesis() {
+
+            let frase = document.getElementById("myInput").value;
+            let seleccion = "";
+
+            let posInicio = frase.indexOf("(");
+            let posFin = frase.indexOf(")") == -1 ? frase.length : frase.indexOf(")");
+
+            if (posInicio != -1) {
+                seleccion = frase.slice(posInicio + 1, posFin);
+            }
+
+            document.getElementById("demo").innerHTML = seleccion;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

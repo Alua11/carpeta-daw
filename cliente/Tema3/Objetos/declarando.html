@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h2>Declarando objetos</h2>
+    <p id="demo"></p>
+
+    <script>
+
+        let juego1 = {
+            emenigos:10,
+            vidas:1,
+            titulo:"Uno",
+            sumarVida: mas1Vida,
+            restarVida: menos1Vida
+        };
+
+        let juego2 = new Object();
+        juego2.enemigos = 20;
+        juego2.vidas = 2;
+        juego2.titulo = "Dos";
+        juego2.sumarVida = mas1Vida;
+        juego2.restarVida = menos1Vida;
+
+        function juegos(numEnemigos, numVidas, tituloJuego) {
+            this.enemigos = numEnemigos;
+            this.vidas = numVidas;
+            this.titulo = tituloJuego;
+        }
+        juegos.sumarVida = mas1Vida;
+        juegos.restarVida = menos1Vida;
+        let juego3 = juegos(30,3,"Tres");
+
+        function mas1Vida() {
+            this.vidas++;
+        }
+        function menos1Vida() {
+            this.vidas--;
+        }
+
+        contenido = `Vidas iniciales ${juego1[titulo]}: ${juego1[vidas]}`;
+        contenido += `Vidas iniciales ${juego2[titulo]}: ${juego2[vidas]}`;
+        contenido += `Vidas iniciales ${juego3[titulo]}: ${juego3[vidas]}`;
+
+        juego1.sumarVida;
+        juego1.sumarVida;
+        juego2.sumarVida;
+        juego2.sumarVida;
+        juego3.sumarVida;
+        juego3.sumarVida;
+
+        contenido = `Sumar 2 vidas en ${juego1[titulo]}: ${juego1[vidas]}`;
+        contenido += `Sumar 2 vidas en ${juego2[titulo]}: ${juego2[vidas]}`;
+        contenido += `Sumar 2 vidas en ${juego3[titulo]}: ${juego3[vidas]}`;
+
+        juego1.restarVida;
+        juego2.restarVida;
+        juego3.restarVida;
+
+        contenido = `Restar 1 vida en ${juego1[titulo]}: ${juego1[vidas]}`;
+        contenido += `Restar 1 vida en ${juego2[titulo]}: ${juego2[vidas]}`;
+        contenido += `Restar 1 vida en ${juego3[titulo]}: ${juego3[vidas]}`;
+
+        document.getElementById("demo").innerHTML = contenido;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+
+<body>
+    <h2>Ejercicio 1</h2>
+    Radio: <input id="myInput" type="text" value="27">
+    <button onclick="calculosCircunferencia(document.getElementById('myInput').value)">Calcular</button>
+    <p id="demo"></p>
+
+
+    <script>
+
+        function longitudCircunferencia(r) {
+
+            let longitud = 2 * Math.PI * r;
+
+            //document.getElementById("demo").innerHTML = longitud;
+
+            return longitud;
+        }
+
+        function superficieCircunferencia(r) {
+
+            let superficie = Math.PI * Math.pow(r, 2);
+
+            //document.getElementById("demo").innerHTML = superficie;
+
+            return superficie;
+        }
+
+        function volumenCircunferencia(r) {
+
+            let volumen = (4/3) * Math.PI * Math.pow(r, 3);
+
+            //document.getElementById("demo").innerHTML = volumen;
+
+            return volumen;
+        }
+
+        function calculosCircunferencia(r) {
+            let longitud = longitudCircunferencia(r);
+            let superficie = superficieCircunferencia(r);
+            let volumen = volumenCircunferencia(r);
+
+            document.getElementById("demo").innerHTML = `Longitud: ${longitud}<br>Superficie: ${superficie}<br>Volumen: ${volumen}<br>Redondeado<br>
+            Longitud: ${Math.round(longitud)}<br>Superficie: ${Math.round(superficie)}<br>Volumen: ${Math.round(volumen)}`;
+        }
+
+    </script>
+</body>
+
+</html>

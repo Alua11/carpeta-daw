@@ -1,0 +1,10 @@
+guardar();
+cambiarmat();
+guardarpush();
+etiquetaECO();
+setTipoCombustible();
+mostrarEtECO();
+mostrarCombustible();
+setCambiarTipoCombustible();
+combustible0aGasolina();
+mostrarCombustible();

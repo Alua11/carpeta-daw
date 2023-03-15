@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Variables</h1>
+
+<p id="prediccion"></p>
+<p id="edad"></p>
+<p id="tiempoVida"></p>
+
+<script>
+    
+    let numHi = 2;
+    let nomPar = "Patata";
+    let ubicacion = "aqui";
+    let trabajo = "tener dinero";
+    document.getElementById("prediccion").innerHTML = " Voy a trabjar en " + trabajo + ", vivire en " + ubicacion + " me casare con " +
+        nomPar + " y tendre " + numHi + " hijos.";
+
+    let actual = 2022;
+    let nacimiento = 1994;
+    let edadCumple = actual - nacimiento;
+    let edadNoCumple = actual - nacimiento - 1;
+    
+    document.getElementById("edad").innerHTML = "Tienes " + edadCumple + " o " + edadNoCumple + " años.";
+    
+
+    let edad = 27;
+    let edadMax = 100;
+    let amountDia = 15;
+    let amountPorComer = (edadMax - edad) * 365 * amountDia;
+
+    document.getElementById("tiempoVida").innerHTML = "De aqui en adelante, comeras " + amountPorComer + "g de frutos secos.";
+    
+</script>
+
+</body>
+</html> 

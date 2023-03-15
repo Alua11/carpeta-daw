@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 content="text/html;charset=utf-8">
+	<title>Crear un objeto</title>
+	<script type="text/javascript">
+    	function coche (marca_in, modelo_in, anyo_in){
+			this.marca = marca_in;
+			this.modelo = modelo_in;
+			this.anyo = anyo_in;
+		}
+	</script>  
+</head>
+<body>
+	<script type="text/javascript">
+		var coches = new Array(4);
+		coches[0] = new coche("Ferrari", "Scaglietti", "2010");
+		coches[1] = new coche("BMW", "Z4", "2010");
+		coches[2] = new coche("Seat", "Toledo", "1999");
+		coches[3] = new coche("Fiat", "500", "1995");
+   
+		for(i=0; i<coches.length; i++){
+			document.write("<b>Marca</b>: " + coches[i].marca + " - <b>Modelo</b>: " + coches[i].modelo + " - <b>A&ntilde;o de fabricaci&oacute;n</b>: " + coches[i].anyo + "<br>");
+		} 
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+
+<body>
+    <h2>Ejercicio 1</h2>
+    <p id="demo"></p>
+
+
+    <script>
+
+        let fechaActual = new Date();
+        let fechaUnix = new Date(0);
+        let fechaNavidad = new Date(2013, 11, 25);
+        let fechaCumple = new Date("11/10/22");
+        document.getElementById("demo").innerHTML = `Fecha y hora actual: ${fechaActual}<br>
+        Fecha y hora de inicio de la era Unix: ${fechaUnix}<br>Fecha y hora de Navidad 2013: ${fechaNavidad}<br>
+        Fecha y hora de mi proximo cumple: ${fechaCumple}`;
+
+    </script>
+</body>
+
+</html>

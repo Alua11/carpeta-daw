@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="myInput" type="text">
+    <button onclick="testPersonalidad(document.getElementById('myInput').value)">Realizar test</button>
+    <p id="demo"></p>
+
+    <script>
+        function esEntero(num){
+            return parseInt(num) == parseFloat(num);
+        }
+        function testPersonalidad(num){
+            let resultado = "";
+
+            if (!isNaN(num)) {
+                num = parseFloat(num);
+                if (esEntero(num)) {
+                    resultado = "No te gusta complicarte la vida";
+                } else {
+                    resultado = "El uso de decimales indica que eres una persona muy detallista";
+                }
+            } else {
+                if (!isNaN(parseInt(num)) && esEntero(num)) {
+                    resultado = "Pues muy cuidadoso no eres, no";
+                } else if (!isNaN(parseInt(num)) && !esEntero(num)) {
+                    resultado = "Te crees muy meticuloso, pero no das una";
+                } else {
+                    resultado = "Pero mira que eres despistao";
+                }
+            }
+            document.getElementById("demo").innerHTML = resultado;
+        }
+
+    </script>
+</body>
+</html>

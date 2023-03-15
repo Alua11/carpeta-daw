@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function person(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+ 
+this.changeName=changeName;
+function changeName(name)
+{
+this.lastname=name;
+}
+}
+
+//Definimos una nueva propiedad para el objeto person
+person.prototype.pension=0;
+
+myMother=new person("Sally","Rally",69,"green");
+myMother.changeName("Doe");
+
+myFather=new person("Norman","Black",72,"green");
+
+
+document.write(myMother.pension);
+document.write("<br/>");
+
+//Esto sí funcionará, ya que myFather sí tiene pension definida
+document.write(myFather.pension);
+
+</script>
+
+</body>
+</html>

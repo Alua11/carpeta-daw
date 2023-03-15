@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <title>Método unshift()</title>
+</head>
+<body>
+	<script type="text/javascript">
+    	var dragon = new Array("Dragonborn", "Skrim", "Dovahkiin");
+     
+
+        var elementos=dragon.length;
+  	document.write("Número de elementos: " + elementos + "<br />");
+    	document.write(dragon);
+ 
+   	elementos = dragon.unshift("Videojuego", "Dragones");
+    	document.write("<br />" + "Número de elementos: " + elementos + "<br />");
+    	document.write(dragon);
+
+	var nuevo = prompt("Escribe una cadena para añadirla al array del Dovahkiin");
+	elementos = dragon.unshift(nuevo);
+    	document.write("<br />" +"Número de elementos: " + elementos + "<br />");
+    	document.write(dragon);
+
+	</script>
+</body>
+</html>

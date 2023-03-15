@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript For In Loop</h2>
+    <p>The for in statement loops through the properties of an object:</p>
+    <p id="demo"></p>
+    <script>
+        const person = { fname: "John", lname: "Doe", age: 23 };
+        let txt = "";
+        //txt = person.fname + " " + person.lname + " " + person.age;
+        //txt = `${person.fname} ${person.lname} ${person.age}`;
+        //txt = `${person['fname']} ${person['lname']} ${person['age']}`;
+        for(let clave in person){
+            //alert(person[clave]);
+            txt += person[clave] + " ";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+</body>
+
+</html>

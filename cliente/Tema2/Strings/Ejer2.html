@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings</title>
+</head>
+
+<body>
+    <h2>Ejercicio 2</h2>
+    <input id="myInput" type="text" value="Soy una cadena">
+    <button onclick="cuentaVocales()">Contar vocales</button>
+    <p id="demo"></p>
+
+
+    <script>
+        //Cantidad de palabras de un string
+        function cuentaVocales() {
+            
+            let frase = document.getElementById("myInput").value.toLowerCase();
+            
+            let numVocales = 0;
+
+            for (let i = 0; i < frase.length; i++) {
+                //contenido de frase[i]
+                let l = frase[i];
+                if (l == 'a' || l == 'e' || l == 'i' || l == 'o' || l == 'u') {
+                    numVocales++;
+                }
+            }
+
+            document.getElementById("demo").innerHTML = numVocales;
+        }
+    </script>
+
+
+</body>
+
+</html>

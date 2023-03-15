@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+
+<body>
+    <h2>Ejercicio 2</h2>
+    <p id="demo"></p>
+
+
+    <script>
+
+        let anyo1 = prompt("Intruduce el año de la primera fecha");
+        let mes1 = prompt("Intruduce el mes de la primera fecha") - 1;
+        let dia1 = prompt("Intruduce el dia de la primera fecha");
+
+        let anyo2 = prompt("Intruduce el año de la primera fecha");
+        let mes2 = prompt("Intruduce el mes de la primera fecha") - 1;
+        let dia2 = prompt("Intruduce el dia de la primera fecha");
+
+        let fecha1 = new Date(anyo1, mes1, dia1);
+        let fecha2 = new Date(anyo2, mes2, dia2);
+
+        document.write("La primera fecha introducida es: " + fecha1 + "<br>");
+        document.write("La segunda fecha introducida es: " + fecha2 + "<br>");
+        
+        let mensaje = "";
+        if (fecha1 < fecha2) {
+            mensaje = "La primera fecha ocurrio antes que la segunda fecha.";
+        } else if (fecha1 > fecha2) {
+            mensaje = "La segunda fecha ocurrio antes que la primera fecha.";
+        } else {
+            mensaje = "Las dos fechas son iguales.";
+        }
+
+        alert(mensaje);
+
+    </script>
+</body>
+
+</html>

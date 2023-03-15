@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+    <h2>Ejercicio 1</h2>
+    <input id="myInput" type="text" value="Soy una cadena">
+    <button onclick="cuentaPalabras()">Contar palabras</button>
+    <p id="demo"></p>
+
+
+    <script>
+        //Cantidad de palabras de un string
+        function cuentaPalabras() {
+            /*
+            let cadena = document.getElementById("myInput").value;
+            let cadenaBuena = cadena.trim();
+            let cadenaMatriz = cadenaBuena.split(" ");
+            let numPalabras = cadenaMatriz.length;
+            */
+
+            //let numPalabras = document.getElementById("myInput").value.trim().split(" ").length;
+
+            //let numPalabras = document.getElementById("myInput").value.replace(/\s+/g, " ").split(" ").length;
+
+            /*
+            let matrizPalabras = document.getElementById("myInput").value.trim().split(" ");
+            let cadena = "";
+            for (let i = 0; i < matrizPalabras.length; i++){
+                if (matrizPalabras[i] != "" && i != matrizPalabras.length-1){
+                    cadena += matrizPalabras[i] + " ";
+                } else if (matrizPalabras[i] != "" && i == matrizPalabras.length-1) {
+                    cadena += matrizPalabras[i];
+                }
+            }
+            let numPalabras = cadena.split(" ").length;
+            */
+
+            let cadena = document.getElementById("myInput").value.trim();
+            let fraseBuena = "";
+
+            for (let i = 0; i < cadena.length; i++) {
+
+                if (!(cadena[i] == " " && cadena[i - 1] == " ")) {
+                    fraseBuena += cadena[i];
+                }
+
+            }
+            let numPalabras = fraseBuena.split(" ").length;
+
+            document.getElementById("demo").innerHTML = numPalabras;
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 charset="utf-8">
+<title>Ejemplo de la funci&oacute;n escape</title>
+</head>
+<body>
+	<script type="text/javascript">
+ 		var cadena ="@ # + - ";
+ 
+		var conescape = escape(cadena);
+                var conencodeURI = encodeURI(cadena);
+                var conencodeURIcomponent = encodeURIComponent(cadena);
+		document.write("Cadena codificada con escape(): " + conescape);
+		document.write("<br>Cadena codificada con encodeURI(): " + conencodeURI);
+		document.write("<br>Cadena codificada con encodeURIComponent(): " + conencodeURIcomponent);
+		
+	</script>
+</body>
+</html> 

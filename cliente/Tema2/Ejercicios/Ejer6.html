@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+
+<body>
+
+    <script>
+
+        alert("Se van a generar 10 numeros aleatorios en el rango que se añada");
+        let num1 = prompt("Limite 1");
+        let num2 = prompt("Limite 2");
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("No has introducido numeros");
+        } else {
+            let minimo = Math.min(num1, num2);
+            let maximo = Math.max(num1, num2);
+
+            let numeros = "";
+            for (let i = 0; i < 10; i++) {
+                numeros += "\n" + ((Math.random() * (maximo - minimo + 1)) + minimo);
+            }
+
+            alert(`Los numeros aleatorios generados entre ${minimo} y ${maximo} son: ${numeros}`);
+        }
+    </script>
+</body>
+
+</html>

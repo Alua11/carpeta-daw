@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+
+<body>
+    <h2>Ejercicio 3</h2>
+    <p id="demo"></p>
+
+
+    <script>
+
+        let fecha = new Date();
+        
+        let anyo = fecha.getFullYear();
+        let mes = fecha.getMonth();
+        let dia = fecha.getDate();
+        let horas = fecha.getHours();
+        let minutos = fecha.getMinutes();
+        let segundos = fecha.getSeconds();
+
+        document.write(`Hoy es ${dia}/${mes}/${anyo}<br>Es la hora ${horas}:${minutos}:${segundos}`);
+
+    </script>
+</body>
+
+</html>

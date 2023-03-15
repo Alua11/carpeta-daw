@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Funcion a la que se le pasan cadenas de caracteres y te devuelve una de ellas de forma aleatoria. 1   
+        function cadAleatoria() {
+            //Array en el que se guardaran los argumentos validos.
+            let argumentosValidos = [];
+
+            let elegida = "";
+
+            //Se rellena el array argumentosValidos con los argumentos validos que se hayan introducido como parametros.
+            for (let i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] != 'string') {
+                    alert(`El argumento ${arguments[i]} no es una cadena de caracteres, por lo que no va a considerar.`);
+                } else {
+                    argumentosValidos.push(arguments[i]);
+                }
+            }
+
+            //Se comprueba que existan argumentos.
+            if (argumentosValidos.length == 0) {
+                alert('No hay argumentos validos.');
+            } else { //En caso de existir, se elige uno de forma aleatoria y se almacena.
+                //Con el metodo random, conseguimos un numero aleatorio entre 0 y 1, sin llegar a 1.
+                //Lo multiplicamos por la longitud del array para aumentar el maximo hasta ese numero.
+                //Se utiliza la funcion floor para que redondee hacia abajo el numero obtenido y conseguir asi un numero entero.
+                //Elegimo floor, para que nunca sea el valor del tamaño del vector y poder acceder a una posicion.
+                let num = Math.floor(Math.random() * (argumentosValidos.length));
+                elegida = argumentosValidos[num];
+            }
+            //La cadena almacenada finalmente, es la que devuelve la funcion.
+            return elegida;
+        }
+
+        //Array en el que se guardaran objetos tipo Coche. 2
+        const almacen = [];
+
+        //Constructor de Coches. 3 y 4
+        function Coche(fMat, matricula) {
+            //Al crear el coche, se le pasan los valores de la fecha de matriculacion y el numero de matricula.
+            //El motor, inicialmente siempre tomara el valor de 'apagado'.
+            this.fMat = new Date(fMat);
+            this.matricula = matricula;
+            this.motor = cadAleatoria('arrancado', 'apagado');
+
+            //Funcion que cambia el estado de motor a 'arrancado'.
+            this.arrancar = function () {
+                this.motor = 'arrancado';
+            }
+            //Funcion que cambia el estado de motor a 'apagado'.
+            this.apagar = function () {
+                this.motor = 'apagado';
+            }
+        }
+
+        //Se generan 5 coches con los datos requeridos. 5
+        for (let i = 0; i < 5; i++) {
+            //Se crea una fecha valida.
+            let fecha = new Date(2000, 0, (i + 1));
+            //Se crea un coche con esa fecha de matriculacion.
+            let coche = new Coche(fecha, i);
+
+            //Se almacena el coche creado en el array almacen.
+            almacen[i] = coche;
+        }
+
+        //Se cambia la fecha de matriculacion a los coches de matricula impar. 6
+        for (let i = 0; i < almacen.length; i++) {
+            //Si el coche tiene matricula impar, entra y se cambia la fecha de matriculacion.
+            if (almacen[i].matricula % 2 != 0) {
+                let fecha = new Date(1995, 2, 3);
+                almacen[i].fMat = fecha;
+            }
+        }
+
+        //Se generan 2 coches con los datos requeridos. 7
+        for (let i = 5; i < 7; i++) {
+            //Se pide un anyo valido.
+            let anyo = 0;
+            do {
+                anyo = prompt('Intruduce el año de matriculacion del coche');
+            } while (!Number.isInteger(anyo*1) || anyo < 1);
+            //Se pide un mes valido.
+            let mes = 0;
+            do {
+                mes = prompt('Intruduce el mes de matriculacion del coche');
+            } while (!Number.isInteger(mes*1) || (mes < 0 || mes > 11));
+            //Se pide un dia valido. (No se tienen en cuenta meses de 31 dias ni los especiales de febrero, se consideraran en otras versiones.)
+            let dia = 0;
+            do {
+                dia = prompt('Intruduce el dia de matriculacion del coche');
+            } while (!Number.isInteger(dia*1) || (dia < 0 || dia > 30));
+            //Se crea una fecha con los parametros solicitados.
+            let fecha = new Date (anyo, mes, dia);
+
+            //se crea un coche con los datos requeridos.
+            let coche = new Coche (fecha, i);
+            //Se almacena el coche en el array.
+            almacen.push(coche);
+        }
+
+        //Añadir la propiedad etEco a los coches cuya fMat es igual o superior a 1 de enero del 2000, con valor '0', 'ECO', 'B' o 'C'. 8
+        for (let i = 0; i < almacen.length; i++) {
+            //Se crea una fecha con la fMat de cada coche.
+            let fecha = new Date(almacen[i].fMat);
+            //Creamos la fecha de referencia con la que queremos comparar.
+            let fechaBase = new Date(2000, 0, 1);
+            //Se compara cada fecha y en caso de cumplir la condicicion, crea el atributo.
+            if (fecha >= fechaBase) {
+                almacen[i].etEco = cadAleatoria('0', 'ECO', 'B', 'C');
+            }
+        }
+
+
+        //Añadir propiedad tipoCombustible al prototipo e inicializar en electrico. Valores validos: 'electrico','gasolina','diesel','hibrido' y 'gas'. 9
+        Coche.prototype.tipoCombustible = 'electrico';
+
+        //Mostrar etEco de los coches de almacen. 10
+        let etiqueta = '';
+        for (let coche of almacen) {
+            if (coche.etEco) {
+                etiqueta += ('El coche con matricula ' + coche.matricula + ' tiene como etiqueta ECO: ' + coche.etEco + '\n');
+            } else {
+                etiqueta += ('El coche con matricula ' + coche.matricula + ' no tiene etiqueta ECO\n');
+            }
+        }
+        console.log(etiqueta);
+
+        //Mostrar combustible de todos los coches del alamacen. 11
+        let combustible1 = '';
+        for (let coche of almacen) {
+            combustible1 += ('Combustible coche matricula ' + coche.matricula + ': ');
+            for (let atributo in coche) {
+                if (atributo == 'tipoCombustible') {
+                    combustible1 += (coche[atributo] + '\n');
+                }
+            }
+            
+        }
+        console.log(combustible1);
+
+        //Metodo cambiarTipoCombustible al prototipo. Cambia el tipo de combustible del coche al del argumento que se le pasa. 12
+        Coche.prototype.cambiarTipoCombustible = function (cambio) {
+            this.tipoCombustible = cambio;
+        }
+
+        //Cambiar el combustible de los coches con etEcho = '0' a 'gasolina'. 13
+        for (let coche of almacen) {
+            if (coche.etEco == '0') {
+                coche.cambiarTipoCombustible('gasolina');
+            }
+        }
+
+
+        //Mostrar combustible de todos los coches del alamacen. 14
+        let combustible2 = '';
+        for (let coche of almacen) {
+            combustible2 += ('Combustible coche matricula ' + coche.matricula + ': ' + coche.tipoCombustible + '\n');
+        }
+        console.log(combustible2);
+
+        console.log(almacen);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Loop</h2>
+
+    <p id="demo"></p>
+
+
+
+    <script>
+
+        function esMarcaDisponible(marcas, marcaUsuario) {
+            
+            for ( let i = 0; i < marcas.length; i++) {
+
+                if (marcaUsuario == marcas[i]) {
+                    return true;
+                }
+            }
+            return false;            
+        }
+
+        function anyadirMarca (marcas, marcaUsuario)  {
+            if (!esMarcaDisponible(marcas, marcaUsuario)) {
+                marcas.push(marcaUsuario);
+                return true; //La marca no existe y se anyade al array.
+            } else {
+                return false; //No hace nada.
+            }
+        }
+
+        const marcasDisponibles = ["BMW", "Volvo", "Mini", "Renault", "Seat", "Tesla", "Citroën"];
+        let marca = prompt("Escribe una marca de coche: ");
+
+        respuesta = anyadirMarca(marcasDisponibles, marca) ? "Se ha anyadido la marca: "+marca : "Ya estaba disponible la marca: "+marca;
+
+        document.getElementById("demo").innerHTML = respuesta;
+            
+        
+    </script>
+
+</body>
+
+</html>

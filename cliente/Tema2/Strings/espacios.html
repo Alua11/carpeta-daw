@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+    <h2>Espacios</h2>
+    <input id="myInput" type="text" value="Soy    una    cadena">
+    <button onclick="cuentaEspacios()">Contar espacios</button>
+    <button onclick="quitaEspacios()">Quitar espacios</button>
+    <p id="demo"></p>
+
+
+    <script>
+        //Cuantos espacios hay en una frase.
+        function cuentaEspacios() {
+
+            let cadena = document.getElementById("myInput").value;
+            let numEspacios = 0;
+
+            for (let i = 0; i < cadena.length; i++) {
+                let pos = cadena.indexOf(" ", i);
+                if (i == pos) {
+                    numEspacios++;
+                }
+            }
+
+            document.getElementById("demo").innerHTML = numEspacios;
+        }
+
+        //Quita el exceso de espacios.
+        function quitaEspacios() {
+
+            let cadena = document.getElementById("myInput").value;
+            let fraseBuena = "";
+
+            //Con este for se quitan los espacios sobrantes.
+            for (let i = 0; i < cadena.length; i++) {
+                if (i != 0 && i != cadena.length - 1) {
+                    if (!(cadena[i] == " " && cadena[i - 1] == " ")) {
+                        fraseBuena += cadena[i];
+                    }
+                } else {
+                    if (((i == 0 || i == cadena.length - 1) && cadena[i] == " ")) {
+                        fraseBuena += "";
+                    } else {
+                        fraseBuena += cadena[i];
+                    }
+                }
+            }
+
+            let fraseFin = "";
+            if (fraseBuena[fraseBuena.length - 1] == " ") {
+                fraseFin = fraseBuena.substring(0, fraseBuena.length - 1);
+            } else {
+                fraseFin = fraseBuena;
+            }
+
+            document.getElementById("demo").innerHTML = fraseFin;
+
+        }
+    </script>
+
+
+</body>
+
+</html>

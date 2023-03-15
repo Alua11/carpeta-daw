@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+<p>An object method is a function definition, stored as a property value.</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+//notacion 1. NOTACION POR LITERALES
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  },
+  Imprimir:ImprimirOtro,
+  Imprimir2: function ImprimirOtro2 (valor){
+            console.log (this.lastName + " " + this.id+" "+valor);
+  }
+};
+
+//NOTACION 2. NOTACION OBJETOS GENERICOS
+var person2 = new Object();
+person2.firstName = "John";
+person2.lastName = "Doe";
+person2.age = 50;
+person2.id = "blue";
+person2.Imprimir = ImprimirOtro;
+
+person2.Imprimir2= function(valor){
+    console.log (this.lastName + " " + this.id+" "+valor);
+    };
+
+//NOTACION 3, DEFINICION POR CONSTRUCTOR
+
+function Persona3(name, lastName){
+    this.firstName = name;
+    this.lastName = lastName;
+    this.age = 50;
+    this.id = "blue";
+}
+Persona3.Imprimir=ImprimirOtro;
+
+let objeto3= new Persona3("Ana","Vives");
+//objeto3.Imprimir(9999);
+let objeto4=objeto3;
+function CambiarObjeto (objeto){
+    objeto.age=25;
+}
+alert (objeto4.age);
+CambiarObjeto(objeto4);
+alert (objeto4.age);
+alert (objeto3.age);
+
+
+function ImprimirOtro (valor){
+      console.log (this.lastName + " " + this.id+" "+valor);
+  }
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+person.Imprimir(55);
+person.nuevaPropiedad="ddd";
+person.id=444;
+//alert (person.nuevaPropiedad);
+person2.Imprimir (55);
+</script>
+
+
+
+
+
+
+</body>
+</html>

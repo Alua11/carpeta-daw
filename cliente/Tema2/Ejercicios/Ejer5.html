@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+
+<body>
+    <h2>Ejercicio 5</h2>
+    <p id="demo"></p>
+
+
+    <script>
+
+        let numeros = "";
+        for (let i = 0; i < 10; i++) {
+            numeros += "<br>" + Math.random();
+        }
+
+        document.getElementById("demo").innerHTML = `Numeros aleatorios entre 0 y 1: ${numeros}`;
+
+    </script>
+</body>
+
+</html>

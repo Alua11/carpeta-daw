@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let cad = "hola   asfadf     rrrrrr ";
+        let inicial = cad;
+
+        /*
+        for (let i in cad){
+                if(cad[i]== ' ' && cad[i+1]== ' ') cad=cad.slice(0,i)+cad.slice(i+2);
+            }
+        */
+        for (let i = 0; i < inicial.length; i++) {
+
+            if (cad[i] == ' ' && cad[i + 1] == ' ') {
+                cad = cad.slice(0, i) + cad.slice(i + 2);
+            }
+
+        }
+
+        if (cad[cad.length - 1] == " ") {
+            cad = cad.substring(0, cad.length - 1);
+        }
+
+        alert("Cadena inicial: " + inicial + "\nCadena final...: " + cad);
+    </script>
+</body>
+
+</html>

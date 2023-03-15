@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 content="text/html;charset=utf-8">
+	<title>Array Multidimensional</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var g_elche = new Array('2','1', '0', '3');
+		var g_hercules = new Array('0','0', '1', '1');
+		var g_madrid = new Array('3','4', '2', '1');
+		var g_barcelona = new Array('2','2', '4', '4');
+	
+		var goles = new Array(g_elche,g_hercules, g_madrid,g_barcelona);
+
+		document.write("<table border=1>");
+		document.write("<tr>");
+		document.write("<td>GOLES</td><td>Elche</td><td>Hércules</td><td>R.Madrid</td><td>Barcelona</td>");
+
+		for (i=0; i<goles.length; i++){
+			document.write("<tr>")
+			document.write("<td><b> Partido " + (i+1) + "</b></td>")
+			for (j=0; j<goles[i].length; j++){
+				document.write("<td>" + goles [i][j] + "</td>")
+			}
+			document.write("</tr>")
+		}
+		document.write("</table>") 
+	</script>
+</body>
+</html>

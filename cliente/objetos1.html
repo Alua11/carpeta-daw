@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const persona = {
+            edad: 24,
+            estatura: 173,
+            peso: 75,
+            adelgazar: function(kilos) {
+                this.peso -= kilos;
+            }
+        }
+
+        persona.adelgazar(5);
+        console.log(persona);
+
+        //De esta forma, copias la referencia, no el objeto.
+        // let persona2 = persona;
+        // console.log(persona2);
+
+        //Para crear un objeto diferente hay que hacerlo desde el principo.
+        let persona2 = {
+            edad: 24,
+            estatura: 173,
+            peso: 75,
+            adelgazar: function (kilos) {
+                this.peso -= kilos;
+            }
+        }
+        console.log(persona2);
+
+
+        //Se puede crear un objeto vacio y luego añadirle las propiedades.
+        let persona3 = {}; //Reserva espacio de memoria.
+        persona3.edad = 20;
+        persona3.estatura = 170;
+        persona3.peso = 70;
+        persona3.adelgazar = function(kilos) {
+            this.peso -= kilos;
+        }
+        console.log(persona3);
+
+        //De esta manera se pueden crear muchos objetos iguales, pero este sistema, no es correcto, lo mejor es crear una funcion constructora.
+        // const personas = [];
+        // for (let i = 0; i < 50; i++) {
+        //     personas[i] = {};
+        //     personas[i].edad = 33;
+        //     personas[i].estatura = 188;
+        //     personas[i].peso = 96;
+        //     personas[i].adelgazar = function(kilos) {
+        //         this.peso -= kilos;
+        //     };
+        // }
+        // console.log(personas);
+
+        //Se crea una funcion constructor.
+        function Humano(edad, estatura, peso) {
+            this.edad = edad;
+            this.estatura = estatura;
+            this.peso = peso;
+            this.adelgazar = function(kilos) {
+                this.peso -= kilos;
+            };
+        }
+        //Se instancia un objeto.
+        let persona4 = new Humano (44, 160, 80); //Reserva espachio de memoria y luego le asigna los atributos, igual que se hizo en persona3.
+        persona4.adelgazar(5);
+        console.log(persona4);
+    </script>
+</body>
+</html>

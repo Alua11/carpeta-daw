@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <title>Método unshift()</title>
+</head>
+<body>
+	<script type="text/javascript">
+function mostrarvector(vector)
+{
+	for (var pos=0; pos<vector.length; pos++) 
+	  document.write(pos +": " + vector[pos] + "<br />");
+}
+
+
+    	var dragon = new Array("Dragonborn", "Skrim", "Dovahkiin", "Dragon", "Fire", "Game");
+     
+        var elementos=dragon.length;
+  	document.write("Número de elementos: " + elementos + "<br />");
+    	
+	mostrarvector(dragon);
+ 
+   	var primero=prompt ("Escribe el índice del que será el primer elemento: ");	
+   	var ultimo=prompt ("Escribe el índice del que será el último elemento: ");	
+
+	while ((isNaN(primero))||isNaN(ultimo)||(ultimo<primero)||(ultimo<0)||(ultimo>=elementos)||(primero<0)||(primero>=elementos))
+	{
+		document.write("<br/n>Error al introducir los índices");
+  		primero=prompt ("Escribe el índice del que será el primer elemento: ");	
+   		ultimo=prompt ("Escribe el índice del que será el último elemento: ");	
+	}
+
+	//Utilizamos el método slice() para "sacar" del array dragon los elementos indicados por los indices primero y último.
+	//Es necesario añadir al nuevo array el elemento indicado por el índice ultimo, ya que slice() no incluye el último elmento indicado.
+	nuevo = dragon.slice(primero,ultimo);
+	nuevo.push(dragon[ultimo]);
+
+
+	document.write("<br/>Nuevo array, formado a partir de los elementos "+primero+" a "+ultimo+ "<br />");
+	document.write("Número de elementos: " + nuevo.length + "<br />");
+	mostrarvector(nuevo);
+
+	</script>
+</body>
+</html>

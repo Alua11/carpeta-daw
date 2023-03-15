@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+
+<body>
+    <h2>Ejercicio 1</h2>
+    Hipotenusa: <input id="hipotenusa" type="text" value="27">
+    Angulo: <input id="angulo" type="text" value="30">
+    <button onclick="longitudesTriangulo(document.getElementById('hipotenusa').value, document.getElementById('angulo').value)">Calcular</button>
+    <p id="demo"></p>
+
+
+    <script>
+
+        function gradosAradianes(a) {
+
+            let radianes = a * Math.PI / 180;
+
+            return radianes;
+        }
+
+        function longitudesTriangulo(hipotenusa,angulo) {
+
+            let a = Math.sin(gradosAradianes(angulo)) * hipotenusa;
+            let b = Math.cos(gradosAradianes(angulo)) * hipotenusa;
+
+            document.getElementById("demo").innerHTML = `Longitud de a: ${a}<br>Longitud de b: ${b}<br>Redondeado<br>
+            Longitud de a: ${Math.round(a)}<br>Longitud de b: ${Math.round(b)}`;
+        }
+
+    </script>
+</body>
+
+</html>
